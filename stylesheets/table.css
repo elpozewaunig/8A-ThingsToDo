@@ -1,0 +1,25 @@
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #d9d9d9;
+  
+  padding: 5px;
+  padding-left: 10px;
+}
+
+tr.head {
+  font-weight: bold;
+  height: 50px;
+  background-color: #ff8200;
+  color: #ffffff;
+}
+
+tr {
+  background-color: #ffffff;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
