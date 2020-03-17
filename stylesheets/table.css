@@ -1,5 +1,7 @@
 table {
   border-collapse: collapse;
+  margin-top: 80px;
+  width: 100%;
 }
 
 td {
@@ -7,6 +9,7 @@ td {
   
   padding: 5px;
   padding-left: 10px;
+  padding-right: 10px;
 }
 
 tr.head {

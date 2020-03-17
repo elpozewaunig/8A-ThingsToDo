@@ -1,0 +1,110 @@
+.subject {
+  padding: 5px;
+  border-radius: 3px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.subject.M {
+  background-color: #1b9a8b;
+}
+
+.subject.E {
+  background-color: #b30000;
+}
+
+.subject.D {
+  background-color: #c49f00;
+}
+
+.subject.BIUK {
+  background-color: #1c7e4c;
+}
+
+.subject.PH {
+  background-color: #1c4f7e;
+}
+
+.subject.GWK {
+  background-color: #6d4190;
+}
+
+.subject.GSPB {
+  background-color: #c36518;
+}
+
+.subject.BE {
+  background-color: #4f3f2a;
+}
+
+.subject.PHL {
+  background-color: #1c4f7e;
+}
+
+.subject.REK {
+  background-color: #0e0044;
+}
+
+.subject.REE {
+  background-color: #0e0044;
+}
+
+.subject.ME {
+  background-color: #9cff6e;
+}
+
+.subject.INFG-SR {
+  background-color: #7e1c5d;
+}
+
+.subject.INFG-KAM {
+  background-color: #7e1c5d;
+}
+
+.subject.INFW-ROH {
+  background-color: #7e5a1c;
+}
+
+.subject.INFW-MI {
+  background-color: #7e5a1c;
+}
+
+.subject.CAE {
+  background-color: #dd9200;
+}
+
+.subject.IT {
+  background-color: #04b300;
+}
+
+.subject.L {
+  background-color: #3b005b;
+}
+
+.subject.SPA {
+  background-color: #5b0000;
+}
+
+.subject.BSPK {
+  background-color: #e2ff6e;
+}
+
+.subject.BSPM {
+  background-color: #e2ff6e;
+}
+
+.subject.WPF-ME {
+  background-color: #9cff6e;
+}
+
+.subject.WPF-GSPB {
+  background-color: #c36518;
+}
+
+.subject.WPF-BIUK {
+  background-color: #1c7e4c;
+}
+
+.subject.WPF-SPK {
+  background-color: #e2ff6e;
+}
