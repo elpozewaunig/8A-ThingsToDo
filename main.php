@@ -33,7 +33,7 @@
            ?>
            
         </select></span>
-        <input type="submit" value="✓"></input>
+        <input type="submit" value="✓">
       </form>
     </topitem>
   </div>
@@ -43,23 +43,18 @@
   session_start();
   
   include 'table_build.php';
-  include 'get_subjects.php';
   
   if (isset($_SESSION['login_successful']) || $_SESSION['login_successful']) {
     
       $work = file('data/work/work.txt');
       
+      if (isset($_COOKIE["user"])==false) {
+        setcookie("user", "all");
+      }
+
       $user = $_COOKIE["user"];
-      
-      if ($user !== "all") {
-        $user_subjects = explode(', ', file_get_contents("data/users/$user"));
-        $subjects = get_subjects($user_subjects);
-      }
-      else {
-        $subjects = ["M", "D", "E", "GSPB", "GWK", "BIUK", "PH", "ME", "PHL", "BE", "L", "IT", "CAE", "SPA", "REK", "REE", "BSPK", "BSPM", "INFG-SR", "INFG-KAM", "INFW-ROH", "INFW-MI", "PUP", "WPF-ME", "WPF-GSPB", "WPF-BIUK", "WPF-SPK"];
-      }
-      
-      table_build($work, $subjects);
+  
+      table_build($work, $user);
     }
     
     
@@ -67,6 +62,6 @@
     header("Location: index.php");
   }
    ?>
-  
+   
 </body>
 </html>
