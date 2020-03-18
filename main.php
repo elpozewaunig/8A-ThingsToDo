@@ -42,17 +42,22 @@
   <?php 
   session_start();
   
-  $_SESSION['user']="Elias"; // test scenario
-  
   include 'table_build.php';
+  include 'get_subjects.php';
   
   if (isset($_SESSION['login_successful']) || $_SESSION['login_successful']) {
     
-    
       $work = file('data/work/work.txt');
       
-      // function should return resolved groups
-      $subjects = ["M", "L", "PH", "E", "D", "IT", "REK", "PHL", "CAE", "BE", "GWK", "INFG-SR"]; // test scenario
+      $user = $_COOKIE["user"];
+      
+      if ($user !== "all") {
+        $user_subjects = explode(', ', file_get_contents("data/users/$user"));
+        $subjects = get_subjects($user_subjects);
+      }
+      else {
+        $subjects = ["M", "D", "E", "GSPB", "GWK", "BIUK", "PH", "ME", "PHL", "BE", "L", "IT", "CAE", "SPA", "REK", "REE", "BSPK", "BSPM", "INFG-SR", "INFG-KAM", "INFW-ROH", "INFW-MI", "PUP", "WPF-ME", "WPF-GSPB", "WPF-BIUK", "WPF-SPK"];
+      }
       
       table_build($work, $subjects);
     }
