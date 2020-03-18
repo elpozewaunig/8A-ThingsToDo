@@ -27,6 +27,16 @@ tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
+tr.finished {
+  background-color: #a2e897;
+  color: #ffffff;
+}
+
+tr.finished:nth-child(even) {
+  background-color: #8cdb7f;
+  color: #ffffff;
+}
+
 input.progress-submit {
   position: fixed;
   bottom: 10px;
@@ -38,4 +48,6 @@ input.progress-submit {
   background-color: #ff5400;
   background-image: linear-gradient(#ff5400, #ff5400);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  
+  cursor: pointer;
 }

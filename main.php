@@ -48,12 +48,14 @@
     
       $work = file('data/work/work.txt');
       
-      if (isset($_COOKIE["user"])==false) {
+      if (isset($_COOKIE['user']) == false) {
         setcookie("user", "all");
+        $user = "all";
+      }
+      else {
+        $user = $_COOKIE['user'];
       }
 
-      $user = $_COOKIE["user"];
-  
       table_build($work, $user);
     }
     
