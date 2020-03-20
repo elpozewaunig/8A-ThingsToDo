@@ -75,10 +75,14 @@ function build_cells($line, $subjects, $include_progress, $progress) {
     }
     
     for ($i = 0; $i < count($cell_array); $i++) {
-      if ($i !== 1) {
+      
+      if ($i !== 1) { // skip id
         
         if ($i == 0) { // subject generation
           $output = $output."<td> <span class=\"subject ". trim($cell_array[$i])."\">".$cell_array[$i]."</span> </td>"; 
+        }
+        elseif ($i == 3) { // resource generation
+          $output = $output."<td>".prettify_resource($cell_array[$i])."</td>";  
         }
         
         else {
@@ -87,10 +91,24 @@ function build_cells($line, $subjects, $include_progress, $progress) {
         
       }
     }
+    
     $output = $output."</tr>";
 }
   
   return $output;
+}
+
+
+
+function prettify_resource($resource) {
+  if (preg_match('#((https?|ftp)://(\S*?\.\S*?))([\s)\[\]{},;"\':<]|\.\s|$)#i', $resource)) { // check if resource is URL
+    $prettified_resource = "<a href=\"".$resource."\">".$resource."</a>";
+  }
+  else {
+    $prettified_resource = $resource;
+  }
+  
+  return $prettified_resource;
 }
 
 ?>

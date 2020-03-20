@@ -51,3 +51,11 @@ input.progress-submit {
   
   cursor: pointer;
 }
+
+td a {
+  color: #1e7c82;
+}
+
+td a:hover {
+  color: #135154;
+}

@@ -1,4 +1,4 @@
-ErrorDocument 404 /6AStuffToDo/404.html
+ErrorDocument 404 /404.html
 
 <Files "password.txt">  
 Order Allow,Deny
