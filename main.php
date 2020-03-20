@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (isset($_SESSION['login_successful']) || $_SESSION['login_successful']) {
+}
+else{
+  header("Location: index.php");
+  exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -39,31 +49,20 @@
   </div>
   <br>
   
-  <?php 
-  session_start();
+<?php 
+include 'table_build.php';
   
-  include 'table_build.php';
-  
-  if (isset($_SESSION['login_successful']) || $_SESSION['login_successful']) {
-    
-      $work = file('data/work/work.txt');
+$work = file('data/work/work.txt');
       
-      if (isset($_COOKIE['user']) == false) {
-        setcookie("user", "all");
-        $user = "all";
-      }
-      else {
-        $user = $_COOKIE['user'];
-      }
+if (isset($_COOKIE['user']) == false) {
+  $user = "all";
+}
+else {
+  $user = $_COOKIE['user'];
+}
 
-      table_build($work, $user);
-    }
-    
-    
-  else {
-    header("Location: index.php");
-  }
-   ?>
+table_build($work, $user);
+?>
    
 </body>
 </html>
