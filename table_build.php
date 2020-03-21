@@ -102,7 +102,7 @@ function build_cells($line, $subjects, $include_progress, $progress) {
 
 function prettify_resource($resource) {
   if (preg_match('#((https?|ftp)://(\S*?\.\S*?))([\s)\[\]{},;"\':<]|\.\s|$)#i', $resource)) { // check if resource is URL
-    $prettified_resource = "<a href=\"".$resource."\">".$resource."</a>";
+    $prettified_resource = "<a href=\"".$resource."\" target=\"_blank\">".$resource."</a>";
   }
   else {
     $prettified_resource = $resource;
