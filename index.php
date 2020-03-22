@@ -1,9 +1,11 @@
 <?php 
 session_start();
 
-if (isset($_SESSION['login_successful']) || $_SESSION['login_successful']) {
-  header("Location: main.php");
-  exit();
+if (isset($_SESSION['login_successful'])) {
+  if ($_SESSION['login_successful']) {
+    header("Location: main.php");
+    exit();
+  }
 }
  ?>
 
