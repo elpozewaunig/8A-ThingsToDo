@@ -74,6 +74,7 @@ div.login {
   padding: 10px;
   margin: 20px;
   background-color: #4062ba;
+  background-image: linear-gradient(#4062ba, #4062ba);
   color: #ffffff;
   font-size: 16px;
   
@@ -82,5 +83,5 @@ div.login {
 
 .login input[type="submit"]:hover {
   background-color: #294180;
-  color: #ffffff;
+  background-image: linear-gradient(#294180, #294180);
 }

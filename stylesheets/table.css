@@ -50,6 +50,12 @@ input.progress-submit {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  }
+
+input.progress-submit:hover {
+  background-color: #e94d00;
+  background-image: linear-gradient(#e94d00, #e94d00);
 }
 
 td a {

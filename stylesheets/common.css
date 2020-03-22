@@ -99,5 +99,10 @@ topitem.user-dropdown select {
     font-size: 16px;
     
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
 }
 
+topitem.user-dropdown input:hover {
+  background-color: #e94d00;
+  background-image: linear-gradient(#e94d00, #e94d00);
+}

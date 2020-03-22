@@ -1,3 +1,12 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['login_successful']) || $_SESSION['login_successful']) {
+  header("Location: main.php");
+  exit();
+}
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
