@@ -62,7 +62,70 @@ else {
 }
 
 table_build($work, $user);
+
+echo '<script src="js/tablefilter/tablefilter.js"></script>';
+
+if ($user == "all") {
+echo <<<TABLEFILTERCONFIG
+<script data-config>
+    var filtersConfig = {
+        base_path: 'js/tablefilter/',
+        state: {
+          types: ['local_storage'],
+          filters: true
+        },
+        col_0: 'select',
+        col_1: 'none',
+        col_2: 'none',
+        col_3: 'none',
+        popup_filters: true,
+        alternate_rows: true,
+        rows_counter: false,
+        btn_reset: false,
+        loader: false,
+        status_bar: false,
+        mark_active_columns: true,
+        highlight_keywords: false,
+        col_types: [
+            'string', 'string', 'string', 'string', 'string'
+        ],
+    };
+TABLEFILTERCONFIG;
+}
+else {
+echo <<<TABLEFILTERCONFIG
+<script data-config>
+    var filtersConfig = {
+        base_path: 'js/tablefilter/',
+        state: {
+          types: ['local_storage'],
+          filters: true
+        },
+        col_0: 'select',
+        col_1: 'select',
+        col_2: 'none',
+        col_3: 'none',
+        col_4: 'none',
+        popup_filters: true,
+        alternate_rows: true,
+        rows_counter: false,
+        btn_reset: false,
+        loader: false,
+        status_bar: false,
+        mark_active_columns: true,
+        highlight_keywords: false,
+        col_types: [
+            'string', 'string', 'string', 'string', 'string'
+        ],
+    };
+TABLEFILTERCONFIG;
+}
 ?>
+
+    var tf = new TableFilter('work', filtersConfig);
+    tf.init();
+
+</script>  
    
 </body>
 </html>

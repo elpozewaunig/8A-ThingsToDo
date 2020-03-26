@@ -5,7 +5,7 @@ function table_build($input, $user) {
   include 'get_subjects.php';
   
   echo "<form action=\"push_progress.php\" method=\"post\">";
-  echo "<table>";
+  echo "<table id=\"work\">";
   
   $include_progress = false;
   
@@ -18,10 +18,10 @@ function table_build($input, $user) {
     $subjects = ["M", "D", "E", "GSPB", "GWK", "BIUK", "PH", "ME", "PHL", "BE", "L", "IT", "CAE", "SPA", "REK", "REE", "BSPK", "BSPM", "INFG-SR", "INFG-KAM", "INFW-ROH", "INFW-MI", "PUP", "WPF-ME", "WPF-GSPB", "WPF-BIUK", "WPF-SPK"];
   }
   
-  echo "<tr class=\"head\">";
+  echo "<thead><tr>";
   
   if ($include_progress) {
-    echo"<td> ✓ </td>";
+    echo"<th> ✓ </th>";
     
     if (file_exists("data/progress/$user")) {
       $progress_array = explode(",", file_get_contents("data/progress/$user"));
@@ -35,7 +35,9 @@ function table_build($input, $user) {
     $progress_array = [];
   }
   
-  echo "<td> Subject </td><td> Description </td><td> Where? </td><td> Deadline </td></tr>";
+  echo "<th id=\"th-subjects\"> Subject </th><th> Description </th><th> Where? </th><th> Deadline </th>";
+  echo "</tr></thead>";
+  echo "<tbody>";
   
   foreach ($input as $l) {
     if ($l!==PHP_EOL) {
@@ -43,6 +45,7 @@ function table_build($input, $user) {
     }
   }
   
+  echo "</tbody>";
   echo "</table>";
   if ($include_progress) {
     echo "<input class=\"progress-submit\" type=\"submit\" value=\"💾\">";
@@ -62,11 +65,11 @@ function build_cells($line, $subjects, $include_progress, $progress) {
       
       if(in_array(trim($cell_array[1]), $progress)) {
         $output = "<tr class=\"finished\">";
-        $output = $output."<td><input type=\"checkbox\" name=\"progress[]\" value=\"".trim($cell_array[1])."\" checked></td>"; // generates checked checkboxes
+        $output = $output."<td><input type=\"checkbox\" name=\"progress[]\" value=\"".trim($cell_array[1])."\" checked=\"true\"><span class=\"sort-meta\">Done</span></td>"; // generates checked checkboxes
       }
       else {
         $output = "<tr>";
-        $output = $output."<td><input type=\"checkbox\" name=\"progress[]\" value=\"".trim($cell_array[1])."\"></td>";
+        $output = $output."<td><input type=\"checkbox\" name=\"progress[]\" value=\"".trim($cell_array[1])."\"><span class=\"sort-meta\">Not done</span></td>";
       }
     }
   
