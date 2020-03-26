@@ -62,12 +62,14 @@ else {
 }
 
 table_build($work, $user);
+?>
 
-echo '<script src="js/tablefilter/tablefilter.js"></script>';
+<script src="js/tablefilter/tablefilter.js"></script>
 
+<script data-config>
+<?php
 if ($user == "all") {
 echo <<<TABLEFILTERCONFIG
-<script data-config>
     var filtersConfig = {
         base_path: 'js/tablefilter/',
         state: {
@@ -94,7 +96,6 @@ TABLEFILTERCONFIG;
 }
 else {
 echo <<<TABLEFILTERCONFIG
-<script data-config>
     var filtersConfig = {
         base_path: 'js/tablefilter/',
         state: {
