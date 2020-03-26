@@ -66,6 +66,15 @@ div.login {
   text-align: center;
 }
 
+.login input[type="password"].wrong-input {
+  border: 2px solid #c60000;
+}
+
+.login div.alert {
+  margin-top: 10px;
+  color: #c60000;
+}
+
 .login input[type="submit"] {
   height: 40px;
   width: 120px;
