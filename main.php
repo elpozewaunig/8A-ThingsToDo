@@ -72,10 +72,6 @@ if ($user == "all") {
 echo <<<TABLEFILTERCONFIG
     var filtersConfig = {
         base_path: 'js/tablefilter/',
-        state: {
-          types: ['local_storage'],
-          filters: true
-        },
         col_0: 'select',
         col_1: 'none',
         col_2: 'none',
