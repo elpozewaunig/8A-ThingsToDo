@@ -72,6 +72,10 @@ if ($user == "all") {
 echo <<<TABLEFILTERCONFIG
     var filtersConfig = {
         base_path: 'js/tablefilter/',
+        state: {
+          types: ['cookie'],
+          filters: true
+        },
         col_0: 'select',
         col_1: 'none',
         col_2: 'none',
@@ -85,8 +89,11 @@ echo <<<TABLEFILTERCONFIG
         mark_active_columns: true,
         highlight_keywords: false,
         col_types: [
-            'string', 'string', 'string', 'string', 'string'
+            'string', 'string', 'string', { type: 'date', locale: 'de' }
         ],
+        extensions: [{ name: 'sort',
+          types: ['none', 'none', 'none', { type: 'date', locale: 'de' }]
+         }]
     };
 TABLEFILTERCONFIG;
 }
@@ -112,8 +119,11 @@ echo <<<TABLEFILTERCONFIG
         mark_active_columns: true,
         highlight_keywords: false,
         col_types: [
-            'string', 'string', 'string', 'string', 'string'
+            'string', 'string', 'string', 'string', { type: 'date', locale: 'de' }
         ],
+        extensions: [{ name: 'sort',
+          types: ['none', 'none', 'none', 'none', { type: 'date', locale: 'de' }]
+         }]
     };
 TABLEFILTERCONFIG;
 }
