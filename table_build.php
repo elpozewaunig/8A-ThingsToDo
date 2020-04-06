@@ -39,9 +39,11 @@ function table_build($input, $user) {
   echo "</tr></thead>";
   echo "<tbody>";
   
+  $subjects_meta = file('data/subjects/subjects.txt');
+  
   foreach ($input as $l) {
     if ($l!==PHP_EOL) {
-      echo build_cells($l, $subjects, $include_progress, $progress_array);
+      echo build_cells($l, $subjects, $include_progress, $progress_array, $subjects_meta);
     }
   }
   
@@ -55,7 +57,7 @@ function table_build($input, $user) {
 
 
 
-function build_cells($line, $subjects, $include_progress, $progress) {
+function build_cells($line, $subjects, $include_progress, $progress, $subjects_meta) {
   $cell_array = str_getcsv($line,"|");
   $output = "";
   
@@ -77,7 +79,7 @@ function build_cells($line, $subjects, $include_progress, $progress) {
       $output = "<tr>";
     }
     
-    for ($i = 0; $i < count($cell_array); $i++) {
+    for ($i = 0; $i < count($cell_array); $i++) { // cycles through every element of one line
       
       if ($i !== 1) { // skip id
         
@@ -87,7 +89,14 @@ function build_cells($line, $subjects, $include_progress, $progress) {
         elseif ($i == 3) { // resource generation
           $output = $output."<td>".prettify_resource($cell_array[$i])."</td>";  
         }
-        
+        elseif ($i == 4) { // date generation
+          if (trim($cell_array[$i]) == '#') {
+            $output = $output."<td>".first_lesson($subjects_meta, $cell_array[0])."</td>";
+          }
+          else {
+            $output = $output."<td>".$cell_array[$i]."</td>"; 
+          }
+        }     
         else {
           $output = $output."<td>".$cell_array[$i]."</td>"; 
         }
@@ -101,7 +110,32 @@ function build_cells($line, $subjects, $include_progress, $progress) {
   return $output;
 }
 
-
+function first_lesson($subject_array, $subject) { // resolves # as next lesson, after school start
+    $nextschoolday = mktime(0, 0, 0, 5, 4, 2020); // 04.05.2020
+    
+    foreach ($subject_array as $l) {
+      $line_array = str_getcsv($l, '|');
+      $line_array = array_map('trim', $line_array);
+      
+      if (trim($subject) == trim($line_array[0])) {
+        $lessons = str_getcsv($line_array[1], ',');
+        
+        $next_lesson = $nextschoolday;
+        
+        for ($i=1; $i <= 7; $i++) {
+          if (in_array(date("D", $next_lesson), array_map('trim', $lessons) )) {
+            break;
+          }
+          else {
+            $next_lesson = strtotime("+1 day", $next_lesson);
+          }
+        }
+      }
+    }
+    
+  $date = date('d.m.Y', $next_lesson); 
+  return $date;
+}
 
 function prettify_resource($resource) {
   if (preg_match('#((https?|ftp)://(\S*?\.\S*?))([\s)\[\]{},;"\':<]|\.\s|$)#i', $resource)) { // check if resource is URL
