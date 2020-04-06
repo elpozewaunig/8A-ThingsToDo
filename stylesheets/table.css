@@ -24,8 +24,8 @@ thead th {
   min-width: 50px;
 }
 
-thead th.th-subjects {
-  min-width: 80px;
+thead th#th-subjects {
+  min-width: 90px;
 }
 
 tr.odd {
