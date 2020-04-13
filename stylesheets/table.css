@@ -89,3 +89,29 @@ select.flt {
   border-radius: 5px;
   min-width: 100px;
 }
+
+/* Dark theme */
+
+@media (prefers-color-scheme: dark) {
+  
+  table {
+    color: #ffffff;
+  }
+  
+  tr.odd {
+    background-color: #222222;
+  }
+  
+  tr.even {
+    background-color: #303030;
+  }
+  
+  tr.finished.odd {
+    background-color: #80a87b;
+  }
+  
+  tr.finished.even {
+    background-color: #72966c;
+  }
+  
+}

@@ -88,7 +88,7 @@ topitem.user-dropdown select {
   cursor: pointer;
 }
   
-  topitem.user-dropdown input {
+topitem.user-dropdown input {
     border: none;
     border-radius: 5px;
     height: 40px;
@@ -106,4 +106,16 @@ topitem.user-dropdown select {
 topitem.user-dropdown input:hover {
   background-color: #e94d00;
   background-image: linear-gradient(#e94d00, #e94d00);
+}
+
+/* Dark theme */
+
+@media (prefers-color-scheme: dark) {
+  
+  body {
+    background-color: #2f2f2f;
+    font-family: Arial;
+    margin-bottom: 110px;
+  }
+  
 }
