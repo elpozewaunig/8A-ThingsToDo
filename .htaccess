@@ -4,3 +4,13 @@ ErrorDocument 404 /404.html
 Order Allow,Deny
 Deny from All
 </Files>
+
+<Files ".gitignore">  
+Order Allow,Deny
+Deny from All
+</Files>
+
+<Files ".gitattributes">  
+Order Allow,Deny
+Deny from All
+</Files>
