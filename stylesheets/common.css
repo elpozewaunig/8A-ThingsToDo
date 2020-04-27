@@ -26,6 +26,7 @@ div.topbar topitem {
 }
 
 div.topbar topitem.header {
+  background-color: #ff8200;
   color: #ffffff;
   font-size: 32px;
   font-weight: bold;
@@ -36,8 +37,10 @@ div.topbar topitem.header {
 }
 
 div.topbar topitem.label {
+  background-color: #ff8200;
   color: #ffffff
   font-size: 16px;
+  padding-right: 20px;
   font-weight: bold;
 }
 
@@ -45,6 +48,11 @@ div.topbar topitem.label span {
   background-color: #ff5400;
   padding: 10px;
   border-radius: 5px;
+}
+
+div.topbar topitem.page {
+  border-left: 1px solid #ffffff;
+  padding: 0px;
 }
 
 div.topbar topitem.user-dropdown {
@@ -56,6 +64,26 @@ div.topbar topitem.return {
   width:100%;
   text-align: right;
   padding-right: 30px;
+}
+
+topitem.page a {
+  padding: 20px;
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+topitem.page.current a {
+  background-color: #ff7a00;
+}
+
+topitem.page a:hover {
+  background-color: #ff6a00;
+}
+
+topitem.page img {
+  vertical-align: bottom;
+  height: 20px;
 }
 
 topitem.return a {

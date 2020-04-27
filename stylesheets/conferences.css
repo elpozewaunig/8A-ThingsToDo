@@ -1,0 +1,31 @@
+.link-button {
+  padding: 10px;
+  border-radius: 5px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+table#conferences td {
+  padding: 15px;
+}
+
+td a.link-button {
+  text-decoration: none;
+}
+
+td a.link-button:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+td img {
+  vertical-align: middle;
+}
+
+.link-button.discord {
+  background-color: #738bd7;
+}
+
+.link-button.bigbluebutton {
+  background-color: #1f72dd;
+}
