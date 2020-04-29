@@ -1,9 +1,21 @@
+<?php
+session_start();
+if (isset($_SESSION['login_successful']) || $_SESSION['login_successful']) {
+}
+else{
+  header("Location: index.php");
+  exit();
+}
+
+$_SESSION['origin'] = "404.php";
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>404 - Page not found</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="stylesheets/common.css">
+  <link rel="stylesheet" href="/stylesheets/common.css">
   
   <style>
     body {
@@ -21,7 +33,7 @@
       font-size: 5vh;
     }
     
-    img {
+    img.picture {
       display: block;
       margin-left: auto;
       margin-right: auto;
@@ -30,16 +42,16 @@
 </head>
 
 <body>
-  
-  <div class="topbar">
-    <topitem class="header"><img src="images/school.svg" style="height: 24px; vertical-align: baseline;"> 6A </topitem>
-    <topitem class="label"><span>Things To Do</span></topitem>
-    <topitem class="return"><a href="main.php"> ← Return to Home </a></topitem>
-  </div>
-  <br><br>
+
+<?php
+include './topbar.php';
+generate_topbar();
+?>  
+
+<br>
     
   <h1>404 - File not found.</h1>
   <h2>But at least Helofish found you.</h2>
-  <img align="center" height="35%" src="images/helo-fish.jpg">
+  <img class="picture" align="center" height="35%" src="/images/helo-fish.jpg">
 </body>
 </html>
