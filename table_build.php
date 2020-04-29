@@ -3,6 +3,7 @@
 function table_build($input, $user) {
   
   include 'get_subjects.php';
+  include 'constants.php'; // contains array of all subjects
   
   echo "<form action=\"push_progress.php\" method=\"post\">";
   echo "<table id=\"work\">";
@@ -12,10 +13,10 @@ function table_build($input, $user) {
   if ($user !== "all") {
     $user_subjects = explode(', ', file_get_contents("data/users/$user"));
     $include_progress = true;
-    $subjects = get_subjects($user_subjects); // neccessary to resolve groups
+    $subjects = get_subjects($user_subjects); // resolves groups to individual subjects
   }
   else {
-    $subjects = ["KV", "M", "D", "E", "GSPB", "GWK", "BIUK", "PH", "ME", "PHL", "BE", "L", "IT", "CAE", "SPA", "REK", "REE", "BSPK", "BSPM", "INFG-SR", "INFG-KAM", "INFW-ROH", "INFW-MI", "PUP", "WPF-ME", "WPF-GSPB", "WPF-BIUK", "WPF-SPK"];
+    $subjects = SUBJECTS; // subjects as defined in constants.php
   }
   
   echo "<thead><tr>";
