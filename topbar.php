@@ -39,6 +39,7 @@ include 'userlist_build.php';
 echo build_userdropdown();
 
 echo <<<TOPBAR
+
       </select></span>
       <input type="submit" value="✓">
     </form>

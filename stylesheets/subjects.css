@@ -5,6 +5,10 @@
   white-space: nowrap;
 }
 
+.subject.KV {
+  background-color: #00cda8;
+}
+
 .subject.M {
   background-color: #1b9a8b;
 }
