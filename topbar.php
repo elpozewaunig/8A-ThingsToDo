@@ -1,4 +1,5 @@
 <?php
+
 function generate_topbar() {
 
 echo <<<TOPBAR
@@ -21,8 +22,7 @@ if ($_SESSION['origin'] == "conferences.php") {
 }
 else {
   echo '<topitem class="page"><a href="/conferences.php"> <img src="/images/video.svg"> Conferences </a></topitem>';
-}
-  
+}  
   
 echo <<<TOPBAR
   

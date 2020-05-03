@@ -29,3 +29,7 @@ td img {
 .link-button.bigbluebutton {
   background-color: #1f72dd;
 }
+
+span.unavailable {
+  color: #cccccc;
+}

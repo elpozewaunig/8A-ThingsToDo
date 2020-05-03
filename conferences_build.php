@@ -89,6 +89,9 @@ function prettify_resource($resource) {
       $prettified_resource = "<a href=\"".$resource."\" target=\"_blank\">".$resource."</a>";
     }
   }
+  elseif (trim($resource) == "") {
+    $prettified_resource = "<span class=\"unavailable\"> No link available yet";
+  }
   else {
     $prettified_resource = $resource;
   }
