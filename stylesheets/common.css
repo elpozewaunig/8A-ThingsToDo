@@ -60,12 +60,6 @@ div.topbar topitem.user-dropdown {
   text-align: right;
 }
 
-div.topbar topitem.return {
-  width:100%;
-  text-align: right;
-  padding-right: 30px;
-}
-
 topitem.page a {
   padding: 20px;
   display: inline-block;
@@ -84,15 +78,6 @@ topitem.page a:hover {
 topitem.page img {
   vertical-align: bottom;
   height: 20px;
-}
-
-topitem.return a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-topitem.return a:hover {
-  color: #f2f2f2;
 }
 
 div.topbar topitem.user-dropdown span {
