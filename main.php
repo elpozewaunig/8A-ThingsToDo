@@ -23,6 +23,8 @@ $_SESSION['origin'] = "main.php";
 <link rel="stylesheet" href="stylesheets/common.css">
 <link rel="stylesheet" href="stylesheets/table.css">
 <link rel="stylesheet" href="stylesheets/subjects.css">
+
+<link rel="stylesheet" media="print" href="stylesheets/print.css">
   
 </head>
 

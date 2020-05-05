@@ -24,6 +24,8 @@ $_SESSION['origin'] = "conferences.php";
 <link rel="stylesheet" href="stylesheets/table.css">
 <link rel="stylesheet" href="stylesheets/subjects.css">
 <link rel="stylesheet" href="stylesheets/conferences.css">
+
+<link rel="stylesheet" media="print" href="stylesheets/print.css">
   
 </head>
 
