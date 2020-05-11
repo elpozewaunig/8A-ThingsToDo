@@ -38,7 +38,6 @@ function build_cells($line, $subjects) {
   $output = "";
   
   if (in_array(trim($cell_array[0]), $subjects)) { // only show item if subject is enabled
-    if (!date_over($cell_array[3])) {
       $output = "<tr>";
     
       for ($i = 0; $i < count($cell_array); $i++) { // cycles through every element of one line
@@ -54,25 +53,11 @@ function build_cells($line, $subjects) {
         }  
         
       }
-    }
   }
     
   $output = $output."</tr>";
   
   return $output;
-}
-
-function date_over($date) {
-  
-  $date_time = date_create_from_format("d.m.Y, H:i", trim($date));
-  
-  if(strtotime("tomorrow") - date_timestamp_get($date_time) > 24*60*60) {
-    return true;
-  }
-  else {
-    return false;
-  }
-  
 }
 
 function prettify_resource($resource) {
