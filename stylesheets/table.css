@@ -87,6 +87,7 @@ th img {
 select.flt {
   border: 1px solid #cccccc;
   border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4);
   min-width: 100px;
 }
 
