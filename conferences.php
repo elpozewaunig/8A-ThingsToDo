@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['login_successful']) || $_SESSION['login_successful']) {
+if (isset($_SESSION['login_successful']) && $_SESSION['login_successful']) {
 }
 else{
   header("Location: index.php");

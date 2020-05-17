@@ -1,11 +1,9 @@
 <?php 
 session_start();
 
-if (isset($_SESSION['return_to_login'])) {
-  if($_SESSION['return_to_login']) { // checks if the page was redirected by login.php
-    unset($_SESSION['return_to_login']);
-    $refresh = false;
-  }
+if (isset($_SESSION['return_to_login']) && $_SESSION['return_to_login']) { // checks if the page was redirected by login.php
+  unset($_SESSION['return_to_login']);
+  $refresh = false;
 }
 else {
   $refresh = true;
