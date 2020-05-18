@@ -60,7 +60,7 @@ conferences_build($conferences, $user);
     var filtersConfig = {
         base_path: 'js/tablefilter/',
         state: {
-          types: ['cookie'],
+          types: ['local_storage'],
           filters: true
         },
         col_0: 'select',
@@ -76,10 +76,10 @@ conferences_build($conferences, $user);
         mark_active_columns: true,
         highlight_keywords: false,
         col_types: [
-            'string', 'string', 'string', { type: 'date', locale: 'de' }
+            'string', 'string', 'string', { type: 'date', format: ['{weekday}, {dd}.{MM}.{yyyy}, {hh}:{mm}'] }
         ],
         extensions: [{ name: 'sort',
-          types: ['none', 'none', 'none', { type: 'date', locale: 'de' }]
+          types: ['none', 'none', 'none', { type: 'date', format: ['{weekday}, {dd}.{MM}.{yyyy}, {hh}:{mm}'] }]
          }]
     };
 
