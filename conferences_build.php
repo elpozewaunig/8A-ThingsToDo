@@ -48,6 +48,9 @@ function build_cells($line, $subjects) {
         elseif ($i == 2) { // resource generation
           $output = $output."<td>".prettify_resource($cell_array[$i])."</td>";  
         }
+        elseif ($i == 3) { // weekday generation
+          $output = $output."<td class=\"date\">".prettify_date($cell_array[$i])."</td>";  
+        }
         else {
             $output = $output."<td>".$cell_array[$i]."</td>"; 
         }  
@@ -84,6 +87,12 @@ function prettify_resource($resource) {
   return $prettified_resource;
 }
 
+function prettify_date($date) {
+  $timestamp = date_timestamp_get( date_create_from_format("d.m.Y, H:i", trim($date)) );
+  $prettified_date = date("D, d.m.Y, H:i", $timestamp);
+  
+  return $prettified_date;
+}
 
 function begins_with($haystack, $needle) {
   $length = strlen($needle);

@@ -33,3 +33,7 @@ td img {
 span.unavailable {
   color: #cccccc;
 }
+
+td.date {
+  font-family: "Courier New";
+}
