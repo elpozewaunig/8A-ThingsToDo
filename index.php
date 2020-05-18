@@ -11,7 +11,12 @@ else {
 
 if (isset($_SESSION['login_successful'])) {
   if ($_SESSION['login_successful']) {
-    header("Location: main.php");
+    if (isset($_SESSION['origin'])) {
+      header("Location: ".$_SESSION['origin']);
+    }
+    else {
+      header("Location: main.php");
+    }
     exit();
   }
   elseif ($_SESSION['login_successful'] == false) {
