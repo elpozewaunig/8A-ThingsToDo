@@ -1,13 +1,14 @@
 <?php
 session_start();
+
+$_SESSION['origin'] = "main.php";
+
 if (isset($_SESSION['login_successful']) && $_SESSION['login_successful']) {
 }
 else{
   header("Location: index.php");
   exit();
 }
-
-$_SESSION['origin'] = "main.php";
 ?>
 
 <!DOCTYPE html>

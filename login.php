@@ -7,7 +7,14 @@ session_start();
 
 if ($password == $key) {
     echo "Success";
-    header("Location: main.php");
+    
+    if (isset($_SESSION['origin'])) {
+      header("Location: ".$_SESSION['origin']);
+    }
+    else {
+      header("Location: main.php");
+    }
+    
     $_SESSION['login_successful'] = true;
     exit();
   }
