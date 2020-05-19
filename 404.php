@@ -16,6 +16,9 @@ else{
 <head>
   <title>404 - Page not found</title>
   <meta charset="utf-8">
+  <link rel="icon" href="/icon.svg">
+  <link rel="apple-touch-icon" href="/touch-icon.png">
+  
   <link rel="stylesheet" href="/stylesheets/common.css">
   
   <style>
