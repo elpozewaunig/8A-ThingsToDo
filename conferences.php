@@ -17,16 +17,20 @@ else{
 <head>
 <title>6A - Conferences</title>
 <meta charset="utf-8">
+
 <link rel="icon" href="icon.svg">
 <link rel="apple-touch-icon" href="touch-icon.png">
 
+<?php
+include 'versionify.php';
 
-<link rel="stylesheet" href="stylesheets/common.css">
-<link rel="stylesheet" href="stylesheets/table.css">
-<link rel="stylesheet" href="stylesheets/subjects.css">
-<link rel="stylesheet" href="stylesheets/conferences.css">
+echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/common.css')."\">";
+echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/table.css')."\">";
+echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/subjects.css')."\">";
+echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/conferences.css')."\">";
 
-<link rel="stylesheet" media="print" href="stylesheets/print.css">
+echo "<link rel=\"stylesheet\" media=\"print\" href=\"".versionify('stylesheets/print.css')."\">";
+?>
   
 </head>
 

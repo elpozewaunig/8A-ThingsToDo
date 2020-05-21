@@ -33,11 +33,16 @@ if (isset($_SESSION['login_successful'])) {
 <meta charset="utf-8">
   
 <title>6A - Things To Do</title>
+
 <link rel="icon" href="icon.svg">
 <link rel="apple-touch-icon" href="touch-icon.png">
 
-<link rel="stylesheet" href="stylesheets/common.css">
-<link rel="stylesheet" type="text/css" href="stylesheets/login.css">
+<?php
+include 'versionify.php';
+
+echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/common.css')."\">";
+echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/login.css')."\">";
+?>
 
 </head>
 
