@@ -1,0 +1,39 @@
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody tr.finished:nth-child(odd) {
+  background-color: #a2e897;
+  color: #ffffff;
+}
+
+tbody tr.finished:nth-child(even) {
+  background-color: #8cdb7f;
+  color: #ffffff;
+}
+
+/* Dark theme */
+
+@media (prefers-color-scheme: dark) {
+  
+  tbody tr:nth-child(odd) {
+    background-color: #222222;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #303030;
+  }
+  
+  tbody tr.finished:nth-child(odd) {
+    background-color: #80a87b;
+  }
+  
+  tbody tr.finished:nth-child(even) {
+    background-color: #72966c;
+  }
+  
+}

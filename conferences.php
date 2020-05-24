@@ -29,6 +29,8 @@ echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/table.css')."\">
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/subjects.css')."\">";
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/conferences.css')."\">";
 
+echo "<noscript> <link rel=\"stylesheet\" href=\"".versionify('stylesheets/table_nojs.css')."\"> </noscript>"; // add fallback stylesheet if JS is disabled
+
 echo "<link rel=\"stylesheet\" media=\"print\" href=\"".versionify('stylesheets/print.css')."\">";
 ?>
   
