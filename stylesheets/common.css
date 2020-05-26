@@ -6,6 +6,7 @@ body {
 
 div.topbar {
   display: table-row;
+  overflow: auto;
   width: 100%;
   position: fixed;
   margin-top: -10px;
