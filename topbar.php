@@ -30,7 +30,7 @@ echo <<<TOPBAR
     
     <form method="post" action="set_user.php">
       <span><img src="/images/user-circle.svg" style="height: 24px; vertical-align: middle;">
-      <select name="user" onchange="this.form.submit()">
+      <select name="user" title="Select user" onchange="this.form.submit()">
         <option value="all"> Students </option>
         
 TOPBAR;
@@ -41,7 +41,7 @@ echo build_userdropdown();
 echo <<<TOPBAR
 
       </select></span>
-      <noscript> <input type="submit" value="✓"> </noscript>
+      <noscript> <input type="submit" value="✓" title="Submit"> </noscript>
     </form>
   </topitem>
 </div>

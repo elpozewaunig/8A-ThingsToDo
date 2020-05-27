@@ -51,7 +51,7 @@ function table_build($input, $user) {
   echo "</tbody>";
   echo "</table>";
   if ($include_progress) {
-    echo "<input class=\"progress-submit\" type=\"submit\" value=\"💾\">";
+    echo "<input class=\"progress-submit\" type=\"submit\" value=\"💾\" title=\"Save\">";
   }
   echo "</form>";
 }
