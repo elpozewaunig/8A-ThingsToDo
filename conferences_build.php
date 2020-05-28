@@ -21,10 +21,17 @@ function conferences_build($input, $user) {
   echo "</tr></thead>";
   echo "<tbody>";
   
-  foreach ($input as $l) {
-    if ($l!==PHP_EOL) {
-      echo build_cells($l, $subjects);
+  if ( !empty($input) ) {
+    
+    foreach ($input as $l) {
+      if ($l!==PHP_EOL) {
+        echo build_cells($l, $subjects);
+      }
     }
+    
+  }
+  else {
+    echo "<tr><td colspan=\"4\"> No upcoming conferences. Time to have some fun! </td></tr>";
   }
   
   echo "</tbody>";
