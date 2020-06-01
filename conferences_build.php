@@ -63,9 +63,10 @@ function build_cells($line, $subjects) {
         }  
         
       }
+      
+      $output = $output."</tr>";
+      
   }
-    
-  $output = $output."</tr>";
   
   return $output;
 }
