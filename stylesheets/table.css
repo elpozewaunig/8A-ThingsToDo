@@ -1,3 +1,8 @@
+form#work_save {
+  display: inline-block;
+  min-width: 100%;
+}
+
 table {
   border-collapse: collapse;
   margin-top: 40px;
@@ -47,9 +52,13 @@ tr.finished.even {
 }
 
 input.progress-submit {
-  position: fixed;
+  display: block;
+  position: sticky;
+  margin-left: auto;
+  margin-top: 10px;
   bottom: 10px;
-  right: 10px;
+  right: 15px;
+  
   border-radius: 50%;
   border: 0px;
   font-size: 20px;

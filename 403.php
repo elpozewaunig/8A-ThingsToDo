@@ -65,9 +65,15 @@ generate_topbar();
 ?>  
 
 <br>
-    
+
+<div class="content">    
   <h1>403 - Forbidden</h1>
   <h2>There's still a chonky boi stuck here.</h2>
   <img class="picture" src="/images/chonky-boi.jpg">
+</div>
+
+<?php 
+include 'bottombar.php';
+ ?>
 </body>
 </html>

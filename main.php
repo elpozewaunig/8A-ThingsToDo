@@ -44,6 +44,8 @@ echo "<link rel=\"stylesheet\" media=\"print\" href=\"".versionify('stylesheets/
   
   <br>
   
+<div class="content">  
+
 <?php 
 include 'table_build.php';
   
@@ -127,7 +129,13 @@ TABLEFILTERCONFIG;
     var tf = new TableFilter('work', filtersConfig);
     tf.init();
 
-</script>  
-   
+</script> 
+ 
+</div>
+
+<?php 
+include 'bottombar.php';
+ ?>
+ 
 </body>
 </html>

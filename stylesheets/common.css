@@ -1,7 +1,20 @@
 body {
+  position: relative;
   background-color: #ffbb54;
   font-family: Arial;
-  margin-bottom: 110px;
+  min-height: 100vh;
+  
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+div.content {
+  padding-top: 20px;
+  padding-bottom: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 div.topbar {
@@ -9,8 +22,6 @@ div.topbar {
   overflow: auto;
   width: 100%;
   position: fixed;
-  margin-top: -10px;
-  margin-left: -10px;
   background-color: #ff9100;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -120,6 +131,39 @@ topitem.user-dropdown input {
 topitem.user-dropdown input:hover {
   background-color: #e94d00;
   background-image: linear-gradient(#e94d00, #e94d00);
+}
+
+div.bottombar {
+  display: flex;
+  justify-content: space-around;
+  
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+  background-color: #ff9100;
+  color: #ffffff;
+  border-top: 1px solid #ffffff;
+}
+
+div.bottombar bottomitem {
+  width: 100%;
+  white-space: nowrap;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+
+div.bottombar bottomitem a {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 20px;
+}
+
+bottomitem img {
+  vertical-align: bottom;
+  height: 20px;
 }
 
 /* Dark theme */

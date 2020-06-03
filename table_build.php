@@ -5,7 +5,7 @@ function table_build($input, $user) {
   include 'get_subjects.php';
   include 'constants.php'; // contains array of all subjects
   
-  echo "<form action=\"push_progress.php\" method=\"post\">";
+  echo "<form id=\"work_save\" action=\"push_progress.php\" method=\"post\">";
   echo "<table id=\"work\">";
   
   $include_progress = false;

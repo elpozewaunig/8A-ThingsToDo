@@ -65,9 +65,15 @@ generate_topbar();
 ?>  
 
 <br>
-    
+
+<div class="content">
   <h1>404 - File not found</h1>
   <h2>But at least Helofish found you.</h2>
   <img class="picture" src="/images/helo-fish.jpg">
+</div>
+  
+  <?php 
+  include 'bottombar.php';
+   ?>
 </body>
 </html>

@@ -44,7 +44,9 @@ generate_topbar();
 ?>
 
 <br>
-  
+
+<div class="content">
+
 <?php 
 include 'conferences_build.php';
   
@@ -92,7 +94,13 @@ conferences_build($conferences, $user);
     var tf = new TableFilter('conferences', filtersConfig);
     tf.init();
 
-</script>  
-   
+</script>
+
+</div>
+
+<?php 
+include 'bottombar.php';
+ ?>
+
 </body>
 </html>
