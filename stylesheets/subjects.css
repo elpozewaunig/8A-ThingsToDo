@@ -105,12 +105,16 @@
   background-color: #ff79fe;
 }
 
+.subject.WPF-INF {
+  background-color: #55411f;
+}
+
 .subject.WPF-GSPB {
   background-color: #c36518;
 }
 
 .subject.WPF-BIUK {
-  background-color: #1c7e4c;
+  background-color: #125c36;
 }
 
 .subject.WPF-SPK {
