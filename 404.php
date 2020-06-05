@@ -1,14 +1,6 @@
 <?php
-session_start();
-
-$_SESSION['origin'] = "404.php";
-
-if (isset($_SESSION['login_successful']) && $_SESSION['login_successful']) {
-}
-else{
-  header("Location: index.php");
-  exit();
-}
+include 'check_login.php';
+check_login();
 ?>
 
 <!DOCTYPE html>
