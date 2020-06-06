@@ -54,7 +54,7 @@ function build_cells($line, $subjects) {
           $output = $output."<td> <span class=\"subject ". trim($cell_array[$i])."\">".$cell_array[$i]."</span> </td>"; 
         }
         elseif ($i == 2) { // resource generation
-          $output = $output."<td>".prettify_resource($cell_array[$i])."</td>";  
+          $output = $output."<td>".prettify_resource( trim($cell_array[$i]) )."</td>";  
         }
         elseif ($i == 3) { // weekday generation
           $output = $output."<td class=\"date\">".prettify_date($cell_array[$i])."</td>";  
@@ -74,7 +74,7 @@ function build_cells($line, $subjects) {
 
 function prettify_resource($resource) {
   
-  if (preg_match('#((https?|ftp)://(\S*?\.\S*?))([\s)\[\]{},;"\':<]|\.\s|$)#i', $resource)) { // check if resource is URL
+  if (filter_var($resource, FILTER_VALIDATE_URL)) { // check if resource is URL
     
     if (begins_with(trim($resource), "https://moodle.it-gymnasium.at/mod/bigbluebuttonbn/")) {
       $prettified_resource = "<a href=\"".$resource."\" target=\"_blank\" class=\"link-button bigbluebutton\"><img src=\"images/bigbluebutton.png\" height=\"16px\"> Open in BigBlueButton </a>";

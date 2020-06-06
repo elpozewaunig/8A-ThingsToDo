@@ -88,7 +88,7 @@ function build_cells($line, $subjects, $include_progress, $progress, $subjects_m
           $output = $output."<td> <span class=\"subject ". trim($cell_array[$i])."\">".$cell_array[$i]."</span> </td>"; 
         }
         elseif ($i == 3) { // resource generation
-          $output = $output."<td>".prettify_resource($cell_array[$i])."</td>";  
+          $output = $output."<td>".prettify_resource( trim($cell_array[$i]) )."</td>";  
         }
         elseif ($i == 4) { // date generation
           if (trim($cell_array[$i]) == '#') {
@@ -139,7 +139,7 @@ function first_lesson($subject_array, $subject) { // resolves # as next lesson, 
 }
 
 function prettify_resource($resource) {
-  if (preg_match('#((https?|ftp)://(\S*?\.\S*?))([\s)\[\]{},;"\':<]|\.\s|$)#i', $resource)) { // check if resource is URL
+  if (filter_var($resource, FILTER_VALIDATE_URL)) { // check if resource is URL
     $prettified_resource = "<a href=\"".$resource."\" target=\"_blank\">".$resource."</a>";
   }
   else {
