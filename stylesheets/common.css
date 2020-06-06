@@ -158,7 +158,9 @@ div.bottombar bottomitem a {
   display: inline-block;
   color: #ffffff;
   text-decoration: none;
-  padding: 20px;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 bottomitem img {
