@@ -1,5 +1,5 @@
 <?php
-include 'check_login.php';
+include 'modules/check_login.php';
 check_login();
 ?>
 
@@ -14,7 +14,7 @@ check_login();
 <link rel="apple-touch-icon" href="touch-icon.png">
 
 <?php
-include 'versionify.php';
+include 'modules/versionify.php';
 
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/common.css')."\">";
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/subjects.css')."\">";
@@ -67,7 +67,7 @@ span.subject {
 <body>
   
   <?php
-  include 'topbar.php';
+  include 'modules/topbar.php';
   generate_topbar();
   ?>
   
@@ -113,7 +113,7 @@ span.subject {
 </div> 
 
 <?php 
-include 'bottombar.php';
+include 'modules/bottombar.php';
  ?>
 
 </body>

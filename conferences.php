@@ -1,5 +1,5 @@
 <?php
-include 'check_login.php';
+include 'modules/check_login.php';
 check_login();
 ?>
 
@@ -14,7 +14,7 @@ check_login();
 <link rel="apple-touch-icon" href="touch-icon.png">
 
 <?php
-include 'versionify.php';
+include 'modules/versionify.php';
 
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/common.css')."\">";
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/table.css')."\">";
@@ -31,7 +31,7 @@ echo "<link rel=\"stylesheet\" media=\"print\" href=\"".versionify('stylesheets/
 <body>
   
 <?php
-include 'topbar.php';
+include 'modules/topbar.php';
 generate_topbar();
 ?>
 
@@ -40,7 +40,7 @@ generate_topbar();
 <div class="content">
 
 <?php 
-include 'conferences_build.php';
+include 'modules/conferences_build.php';
   
 $conferences = file('data/conferences/conferences.txt');
       
@@ -91,7 +91,7 @@ conferences_build($conferences, $user);
 </div>
 
 <?php 
-include 'bottombar.php';
+include 'modules/bottombar.php';
  ?>
 
 </body>

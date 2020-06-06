@@ -1,5 +1,5 @@
 <?php
-include 'check_login.php';
+include 'modules/check_login.php';
 check_login();
 ?>
 
@@ -14,7 +14,7 @@ check_login();
 <link rel="apple-touch-icon" href="touch-icon.png">
 
 <?php
-include 'versionify.php';
+include 'modules/versionify.php';
 
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/common.css')."\">";
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/table.css')."\">";
@@ -30,7 +30,7 @@ echo "<link rel=\"stylesheet\" media=\"print\" href=\"".versionify('stylesheets/
 <body>
   
   <?php
-  include 'topbar.php';
+  include 'modules/topbar.php';
   generate_topbar();
   ?>
   
@@ -39,7 +39,7 @@ echo "<link rel=\"stylesheet\" media=\"print\" href=\"".versionify('stylesheets/
 <div class="content">  
 
 <?php 
-include 'table_build.php';
+include 'modules/table_build.php';
   
 $work = file('data/work/work.txt');
       
@@ -126,7 +126,7 @@ TABLEFILTERCONFIG;
 </div>
 
 <?php 
-include 'bottombar.php';
+include 'modules/bottombar.php';
  ?>
  
 </body>

@@ -1,5 +1,5 @@
 <?php
-include 'check_login.php';
+include './modules/check_login.php';
 check_login();
 ?>
 
@@ -13,7 +13,7 @@ check_login();
   <link rel="apple-touch-icon" href="/touch-icon.png">
   
   <?php
-  include 'versionify.php';
+  include './modules/versionify.php';
   
   echo "<link rel=\"stylesheet\" href=\"".versionify('/stylesheets/common.css')."\">";
   ?>
@@ -52,7 +52,7 @@ check_login();
 <body>
 
 <?php
-include './topbar.php';
+include './modules/topbar.php';
 generate_topbar();
 ?>  
 
@@ -65,7 +65,7 @@ generate_topbar();
 </div>
 
 <?php 
-include 'bottombar.php';
+include './modules/bottombar.php';
  ?>
 </body>
 </html>

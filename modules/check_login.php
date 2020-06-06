@@ -9,7 +9,7 @@ function check_login() {
   if (isset($_SESSION['login_successful']) && $_SESSION['login_successful']) {
   }
   else {
-    header("Location: /index.php");
+    header("Location: index.php");
     exit();
   }
 
