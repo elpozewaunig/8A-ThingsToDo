@@ -34,8 +34,8 @@ if (isset($_SESSION['login_successful'])) {
   
 <title>6A - Things To Do</title>
 
-<link rel="icon" href="icon.svg">
-<link rel="apple-touch-icon" href="touch-icon.png">
+<link rel="icon" href="images/icons/icon.svg">
+<link rel="apple-touch-icon" href="images/icons/touch-icon.png">
 
 <?php
 include 'modules/versionify.php';
