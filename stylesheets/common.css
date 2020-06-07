@@ -154,6 +154,12 @@ div.bottombar bottomitem {
   font-weight: bold;
   text-align: center;
   display: inline-block;
+  
+  transition: all 0.1s ease-in-out;
+}
+
+div.bottombar bottomitem:hover {
+  background-color: #ff6a00;
 }
 
 div.bottombar bottomitem a {
