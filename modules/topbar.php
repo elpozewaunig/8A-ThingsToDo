@@ -10,14 +10,14 @@ echo <<<TOPBAR
   
 TOPBAR;  
 
-if ($_SESSION['origin'] == "main.php") {
+if ($_SESSION['origin'] == "/main.php") {
   echo '<topitem class="page current"><a href="/main.php"> <img src="/images/edit.svg"> Work </a></topitem>';
 }
 else {
   echo '<topitem class="page"><a href="/main.php"> <img src="/images/edit.svg"> Work </a></topitem>';
 }
 
-if ($_SESSION['origin'] == "conferences.php") {
+if ($_SESSION['origin'] == "/conferences.php") {
   echo '<topitem class="page current"><a href="/conferences.php"> <img src="/images/video.svg"> Conferences </a></topitem>';
 }
 else {
