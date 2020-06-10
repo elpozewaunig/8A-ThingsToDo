@@ -52,3 +52,7 @@ The CSS at ``stylesheets/subjects.css`` is meant to be fully customized if you c
 
 ### Styling
 To change basic styling, you should modify ``stylesheets/common.css``. This should fullfil most of your needs. In order to change the default title, class or links, you can simply swap out minor portions of text at ``modules/topbar.php`` and ``modules/bottombar.php``. To change the title tag of the PHP pages, simply exchange the text enclosed in ``<title> ... </title>`` of the respective pages.
+
+## Open Source Licenses
+* [TableFilter](https://github.com/koalyptus/TableFilter), a JavaScript library that allows tables to be filtered and sorted, is used in the frontend. It is licensed under the MIT License.
+* [FontAwesome](https://fontawesome.com) is the origin of the website icons, all of which are licensed under Creative Commons BY 4.0.
