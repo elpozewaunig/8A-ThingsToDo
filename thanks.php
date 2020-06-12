@@ -23,6 +23,7 @@ echo "<link rel=\"stylesheet\" media=\"print\" href=\"".versionify('stylesheets/
 ?>
   
 <style>
+
 h1 {
   display: block;
   margin-top: 50px;
@@ -31,10 +32,17 @@ h1 {
   padding: 10px;
   border-radius: 5px;
 }
+
+h1 img {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 div.content-block {
   color: #ffffff;
   padding-left: 10px;
 }
+
 ul {
   color: #ff5400;
 }
@@ -60,6 +68,7 @@ span.subject {
   font-size: 12px;
   padding: 3px;
 }
+
 </style>
   
 </head>
