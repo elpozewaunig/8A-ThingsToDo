@@ -61,7 +61,7 @@ generate_topbar();
 <div class="content">
   <h1>404 - File not found</h1>
   <h2>But at least Helofish found you.</h2>
-  <img class="picture" src="/images/helo-fish.jpg">
+  <img class="picture" src="/images/helo-fish.jpg" alt="Helofish">
 </div>
   
   <?php 
