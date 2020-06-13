@@ -69,6 +69,16 @@ span.subject {
   padding: 3px;
 }
 
+/* Dark theme */
+
+@media (prefers-color-scheme: dark) {
+  
+  div.description {
+    color: #ffffff;
+  }
+  
+}
+
 </style>
   
 </head>
