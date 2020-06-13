@@ -39,7 +39,7 @@ h1 img {
 }
 
 div.content-block {
-  color: #ffffff;
+  color: #4a4a4a;
   padding-left: 10px;
 }
 
@@ -72,6 +72,10 @@ span.subject {
 /* Dark theme */
 
 @media (prefers-color-scheme: dark) {
+  
+  div.content-block {
+    color: #ffffff;
+  }
   
   div.description {
     color: #ffffff;
