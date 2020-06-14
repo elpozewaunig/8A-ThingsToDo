@@ -20,7 +20,7 @@ function build_userdropdown() {
   
   for ($i = 0; $i < count($users); $i++) {
     if ($i > 1) { // Skip the directories ".." and "."
-      if ($users[$i] == $_COOKIE["user"]) {
+      if (isset($_COOKIE["user"]) && $users[$i] == $_COOKIE["user"]) {
         $output = $output."<option selected value=\"$users[$i]\">".$users[$i]."</option>";
       }
       else {
