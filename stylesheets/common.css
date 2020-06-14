@@ -94,7 +94,7 @@ topitem.page img {
   height: 20px;
 }
 
-div.topbar topitem.user-dropdown span {
+div.topbar topitem.user-dropdown div {
     display: inline-block;
     padding-left: 10px;
     border-radius: 5px;
