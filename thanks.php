@@ -98,7 +98,7 @@ span.subject {
 
 <div class="content">
   
-<h1> <img src="images/heart.svg" height="26px"> Thank you </h2> 
+<h1> <img src="images/heart.svg" height="26px"> Thank you </h1> 
   
 <div class="content-block">
   <b>This website would not be possible, if it wasn't for some amazing people. You guys rock!</b>
