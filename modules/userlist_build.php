@@ -7,11 +7,11 @@ function get_users() { // creates array with usernames
   $user_names = scandir($user_dir);
   
   foreach ($user_names as $element) {
-    if (is_dir($user_dir."/".$element)) {
-      
+    if (!is_dir($user_dir."/".$element)) {
+      $cleaned_user_names[] = $element;
     }
   }
-  return $user_names;
+  return $cleaned_user_names;
 }
 
 function build_userdropdown() {
@@ -19,13 +19,11 @@ function build_userdropdown() {
   $output = "";
   
   for ($i = 0; $i < count($users); $i++) {
-    if ($i > 1) { // Skip the directories ".." and "."
-      if (isset($_COOKIE["user"]) && $users[$i] == $_COOKIE["user"]) {
-        $output = $output."<option selected value=\"$users[$i]\">".$users[$i]."</option>";
-      }
-      else {
-        $output = $output."<option value=\"$users[$i]\">".$users[$i]."</option>"; 
-      }
+    if (isset($_COOKIE["user"]) && $users[$i] == $_COOKIE["user"]) {
+      $output = $output."<option selected value=\"$users[$i]\">".$users[$i]."</option>";
+    }
+    else {
+      $output = $output."<option value=\"$users[$i]\">".$users[$i]."</option>"; 
     }
     
   }
