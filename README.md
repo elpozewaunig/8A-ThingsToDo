@@ -1,6 +1,9 @@
 # 6A ThingsToDo
 
-This is the source code for running an Apache Server to provide an overview and help coordinate workload for students of 6A during the Coronavirus break. It features a dynamically generated table tailored to the respective users subjects, the possibility to store progress on the server and also some more goodies, such as a conference calender. For the time being it is specifically tailored to this usecase, but it can easily be customized to more general situations.
+This is the source code for running an Apache Server to provide an overview and help coordinate workload for students of class 6A during the Coronavirus break. It features a dynamically generated table tailored to the respective users subjects, the possibility to store progress on the server and also some more goodies, such as a conference calender. For the time being it is specifically tailored to this usecase, but it can easily be customized to more general situations.
+
+## Installation
+Check out ``INSTALL.md`` to find out how to install this project.
 
 ## Configuration
 The setup requires creating a file named ``password.txt`` in the root directory. This file should only contain the password for letting users log in to the website. This is just one password for the entire class. Users are trusted not to vandalize others progress.
@@ -44,6 +47,9 @@ Subject | Description | Link | Date (DD.MM.YYY, hh:mm)
 
 ## Customization
 
+### Contact & Thanks
+The ``about.php`` and ``thanks.php`` pages are placeholders to get you started. Please change these pages accordingly. You need not mention the original author or license as long as you keep the ``LICENSE`` file in this repository. However, you do need to keep the section "Open Source Licenses" on the About page.
+
 ### Default subjects
 At ``modules/constants.php`` there is an array containing the default subjects that will be displayed if no user is set. If you want to add or remove subjects, change this file according to the schema found there.
 
@@ -51,7 +57,7 @@ At ``modules/constants.php`` there is an array containing the default subjects t
 The CSS at ``stylesheets/subjects.css`` is meant to be fully customized if you create new subjects or are not happy with the default styling.
 
 ### Styling
-To change basic styling, you should modify ``stylesheets/common.css``. This should fullfil most of your needs. In order to change the default title, class or links, you can simply swap out minor portions of text at ``modules/topbar.php`` and ``modules/bottombar.php``. To change the title tag of the PHP pages, simply exchange the text enclosed in ``<title> ... </title>`` of the respective pages.
+To change basic styling, you should modify ``stylesheets/common.css``. This should fullfil most of your needs. In order to change the default title, class or links, you can simply swap out minor portions of text at ``modules/common/topbar.php`` and ``modules/bottombar.php``. To change the title tag of the PHP pages, simply exchange the text enclosed in ``<title> ... </title>`` of the respective pages.
 
 ## Open Source Licenses
 * [TableFilter](https://github.com/koalyptus/TableFilter), a JavaScript library that allows tables to be filtered and sorted, is used in the frontend. It is licensed under the MIT License.
