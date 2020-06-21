@@ -34,9 +34,8 @@ echo <<<TOPBAR
         <option value="all"> Students </option>
         
 TOPBAR;
-
-include 'userlist_build.php';        
-echo build_userdropdown();
+     
+echo build_userdropdown(); // this function must be included from userlist_build.php
 
 echo <<<TOPBAR
 

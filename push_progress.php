@@ -1,6 +1,6 @@
 <?php
 
-include 'modules/userlist_build.php';
+include 'modules/common/userlist_build.php';
 include 'modules/get_ids.php';
 
 $user_array = get_users();

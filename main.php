@@ -1,6 +1,7 @@
 <?php
-include 'modules/check_login.php';
+include 'modules/common/master_include.php';
 check_login();
+check_user();
 ?>
 
 <!DOCTYPE html>
@@ -14,8 +15,6 @@ check_login();
 <link rel="apple-touch-icon" href="images/icons/touch-icon.png">
 
 <?php
-include 'modules/versionify.php';
-
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/common.css')."\">";
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/table.css')."\">";
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/subjects.css')."\">";
@@ -30,7 +29,6 @@ echo "<link rel=\"stylesheet\" media=\"print\" href=\"".versionify('stylesheets/
 <body>
   
   <?php
-  include 'modules/topbar.php';
   generate_topbar();
   ?>
   

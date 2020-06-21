@@ -38,7 +38,7 @@ if (isset($_SESSION['login_successful'])) {
 <link rel="apple-touch-icon" href="images/icons/touch-icon.png">
 
 <?php
-include 'modules/versionify.php';
+include 'modules/common/versionify.php';
 
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/common.css')."\">";
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/login.css')."\">";

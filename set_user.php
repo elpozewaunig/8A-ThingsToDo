@@ -1,7 +1,7 @@
 <?php
 session_start(); 
 
-include 'modules/userlist_build.php';
+include 'modules/common/userlist_build.php';
 
 $user_array = get_users();
 
