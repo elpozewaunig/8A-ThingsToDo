@@ -2,6 +2,7 @@
 session_start(); 
 
 if(isset($_POST['user'])) {
+  $user = $_POST['user'];
   setcookie("user", $user);
 }
 
