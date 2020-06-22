@@ -11,6 +11,14 @@ The setup requires creating a file named ``password.txt`` in the root directory.
 ## Data
 Create a folder called ``data``. User data, progress and work will be stored there.
 
+### .htaccess
+It is highly recommended to place a file called ``.htaccess`` in the ``data`` folder. It should have the following content:
+```
+Order Allow,Deny
+Deny from All
+```
+This prevents people from accessing data without being logged in.
+
 ### Work
 Within the ``data`` folder, create a folder called ``work``. Place a file called ``work.txt`` into this folder.
 In it you can note down work using the following structure:
