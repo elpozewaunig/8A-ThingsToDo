@@ -10,4 +10,4 @@
 3. Move the repository into the web directory of your server (e.g. ``htdocs`` for XAMPP, ``www`` for MoWeS)
 4. Start up your server
 5. You're done! Now navigate to ``localhost`` in the web browser of your choice
-6. Follow the instructions in ``README.md`` to customize the website
+6. Follow the instructions in [``README.md``](README.md) to customize the website
