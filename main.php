@@ -17,6 +17,7 @@ check_user();
 <?php
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/common.css')."\">";
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/table.css')."\">";
+echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/tablefilter_override.css')."\">";
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/subjects.css')."\">";
 
 echo "<noscript> <link rel=\"stylesheet\" href=\"".versionify('stylesheets/table_nojs.css')."\"> </noscript>"; // add fallback stylesheet if JS is disabled

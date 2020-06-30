@@ -21,12 +21,15 @@ thead tr {
   font-weight: bold;
   text-align: left;
   height: 50px;
-  background-color: #ff8200;
-  color: #ffffff;
 }
 
-thead th {
+thead tr th {
+  background-color: #ff8200 !important;
+  color: #ffffff !important;
+  padding: 10px !important;
+  
   min-width: 50px;
+  white-space: nowrap;
 }
 
 thead th#th-subjects {
@@ -91,13 +94,6 @@ td .sort-meta {
 th img {
   margin-left: 10px;
   cursor: pointer;
-}
-
-select.flt {
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4);
-  min-width: 100px;
 }
 
 /* Dark theme */
