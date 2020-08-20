@@ -22,19 +22,19 @@ select.flt {
   border: none !important;
 }
 
-img[src="js/tablefilter/style/themes/icn_filter.gif"] {
+img[src="node_modules/tablefilter/dist/tablefilter/style/themes/icn_filter.gif"] {
   display: inline-block;
   box-sizing: border-box;
-  background: url(/images/table/icn_filter.gif) no-repeat;
+  background: url('/images/table/icn_filter.gif') no-repeat;
   width: 14px; /* Width of new image */
   height: 14px; /* Height of new image */
   padding-left: 14px; /* Equal to width of new image */
 }
 
-img[src="js/tablefilter/style/themes/icn_filterActive.gif"] {
+img[src="node_modules/tablefilter/dist/tablefilter/style/themes/icn_filterActive.gif"] {
   display: inline-block;
   box-sizing: border-box;
-  background: url(/images/table/icn_filterActive.gif) no-repeat;
+  background: url('/images/table/icn_filterActive.gif') no-repeat;
   width: 14px; /* Width of new image */
   height: 14px; /* Height of new image */
   padding-left: 14px; /* Equal to width of new image */

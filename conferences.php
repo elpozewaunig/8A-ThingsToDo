@@ -53,11 +53,11 @@ else {
 conferences_build($conferences, $user);
 ?>
 
-<script src="js/tablefilter/tablefilter.js"></script>
+<script src="node_modules/tablefilter/dist/tablefilter/tablefilter.js"></script>
 
 <script data-config>
     var filtersConfig = {
-        base_path: 'js/tablefilter/',
+        base_path: 'node_modules/tablefilter/dist/tablefilter/',
         state: {
           types: ['local_storage'],
           filters: true

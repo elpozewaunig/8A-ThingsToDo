@@ -52,14 +52,14 @@ else {
 table_build($work, $user);
 ?>
 
-<script src="js/tablefilter/tablefilter.js"></script>
+<script src="node_modules/tablefilter/dist/tablefilter/tablefilter.js"></script>
 
 <script data-config>
 <?php
 if ($user == "all") {
 echo <<<TABLEFILTERCONFIG
     var filtersConfig = {
-        base_path: 'js/tablefilter/',
+        base_path: 'node_modules/tablefilter/dist/tablefilter/',
         state: {
           types: ['cookie'],
           filters: true
@@ -88,7 +88,7 @@ TABLEFILTERCONFIG;
 else {
 echo <<<TABLEFILTERCONFIG
     var filtersConfig = {
-        base_path: 'js/tablefilter/',
+        base_path: 'node_modules/tablefilter/dist/tablefilter/',
         state: {
           types: ['local_storage'],
           filters: true
