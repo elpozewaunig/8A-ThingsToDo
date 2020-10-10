@@ -1,0 +1,5 @@
+title: 6A
+subtitle: Things To Do
+logo: /images/school.svg
+icon: /images/icons/icon.svg
+touch_icon: /images/icons/touch-icon.png

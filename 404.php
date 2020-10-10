@@ -10,8 +10,8 @@ check_user();
   <title>404 - Page not found</title>
   <meta charset="utf-8">
   
-  <link rel="icon" href="/images/icons/icon.svg">
-  <link rel="apple-touch-icon" href="/images/icons/touch-icon.png">
+  <link rel="icon" href="<?= icon ?>">
+  <link rel="apple-touch-icon" href="<?= touch_icon ?>">
   
   <?php
   echo "<link rel=\"stylesheet\" href=\"".versionify('/stylesheets/common.css')."\">";

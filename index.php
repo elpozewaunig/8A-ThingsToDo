@@ -1,4 +1,7 @@
 <?php 
+
+include 'modules/common/get_config.php';
+
 session_start();
 
 if (isset($_SESSION['return_to_login']) && $_SESSION['return_to_login']) { // checks if the page was redirected by login.php
@@ -32,10 +35,10 @@ if (isset($_SESSION['login_successful'])) {
 <head>
 <meta charset="utf-8">
   
-<title>6A - Things To Do</title>
+<title> <?= title ?> - <?= subtitle ?> </title>
 
-<link rel="icon" href="images/icons/icon.svg">
-<link rel="apple-touch-icon" href="images/icons/touch-icon.png">
+<link rel="icon" href="<?= icon ?>">
+<link rel="apple-touch-icon" href="<?= touch_icon ?>">
 
 <?php
 include 'modules/common/versionify.php';
@@ -51,8 +54,8 @@ echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/login.css')."\">
   <div class="login">
     <div class="headerbar">
       <img src="images/triangle.svg" style="height: 15vw; position: absolute; left: 0; top: 0;">
-    <h1><img src="images/school.svg" style="height: 8vw; vertical-align: baseline;"> 6A</h1>
-    <h2>Things To Do</h2>
+    <h1><img src="images/school.svg" style="height: 8vw; vertical-align: baseline;"> <?= title ?> </h1>
+    <h2> <?= subtitle ?> </h2>
   </div>
   <h3>Login here first</h3>
   

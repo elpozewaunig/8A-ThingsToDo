@@ -3,11 +3,27 @@
 function generate_topbar() {
 
 echo <<<TOPBAR
-
 <div class="topbar">
-  <topitem class="header"><img src="/images/school.svg" style="height: 24px; vertical-align: baseline;"> 6A </topitem>
-  <topitem class="label"><span>Things To Do</span></topitem>
+  <topitem class="header"><img src="
+TOPBAR;
+
+echo logo;
+
+echo <<<TOPBAR
+" style="height: 24px; vertical-align: baseline;"> 
+TOPBAR;
+
+echo title;
+
+echo <<<TOPBAR
+ </topitem>
+  <topitem class="label"><span>
+TOPBAR;
   
+  echo subtitle;
+  
+  echo <<<TOPBAR
+</span></topitem>
 TOPBAR;  
 
 if ($_SESSION['origin'] == "/main.php") {
