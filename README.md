@@ -42,7 +42,7 @@ A group called "base" must be saved under ``data/groups/base``. It can then be r
 ## Specials (optional)
 
 ### Subjects
-This data type was designed to enable automatic calculation for the next lesson after the school begins again, since this date was not fixed for a long time at still might be changed.
+This data type was designed to enable automatic calculation for the next lesson after school begins again, since this date was not fixed for a long time and still might be changed.
 Within the ``data`` folder, a folder named ``subjects`` can be created. Within it, there should be a file named ``subjects.txt``. Subjects can be entered using the following structure:
 
 Subject | 3-letter-weekdays separated by commas (Mon, Tue, ...)
