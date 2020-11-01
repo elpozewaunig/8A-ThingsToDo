@@ -1,93 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="100"
-   height="100"
-   viewBox="0 0 26.458333 26.458334"
-   version="1.1"
-   id="svg8"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="touch-icon.svg"
-   inkscape:export-filename="C:\XAMPP\htdocs\6AThingsToDo\touch-icon.png"
-   inkscape:export-xdpi="109.43999"
-   inkscape:export-ydpi="109.43999">
-  <defs
-     id="defs2" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="21.175492"
-     inkscape:cy="63.292105"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     units="px"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
-  <metadata
-     id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Ebene 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-270.54165)">
-    <rect
-       style="fill:#ff6600;stroke:none;stroke-width:0.20543107"
-       id="rect10"
-       width="26.458334"
-       height="26.458334"
-       x="0"
-       y="270.54166" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.64571095px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26614273"
-       x="5.8712549"
-       y="291.55759"
-       id="text14"><tspan
-         sodipodi:role="line"
-         id="tspan12"
-         x="5.8712549"
-         y="291.55759"
-         style="fill:#ffffff;stroke-width:0.26614273">6A</tspan></text>
-    <g
-       id="g30"
-       transform="matrix(0.56696429,0,0,0.56696429,9.2604167,273.94343)">
-      <path
-         style="fill:#ffffff"
-         id="path61"
-         d="M 10,0 V 15 C 10,15 0,15 0,15 0,15 0,0 0,0 Z M 9,1 H 1 v 13 c 0,0 8,0 8,0 z M 2.5,4 c 0,0 5,0 5,0 0.5,0 0.5,1 0,1 0,0 -5,0 -5,0 C 2,5 2,4 2.5,4 Z m 0,2 c 0,0 5,0 5,0 0.5,0 0.5,1 0,1 0,0 -5,0 -5,0 C 2,7 2,6 2.5,6 Z m 0,2 c 0,0 5,0 5,0 0.5,0 0.5,1 0,1 0,0 -5,0 -5,0 C 2,9 2,8 2.5,8 Z m 0,2 c 0,0 5,0 5,0 0.5,0 0.5,1 0,1 0,0 -5,0 -5,0 C 2,11 2,10 2.5,10 Z"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:#ffffff"
-         id="path63"
-         d="m 11,13 c 0.5,0.5 2.5,0.5 3,0 0,0 -1,2 -1.5,2 C 12,15 11,13 11,13 Z M 11,3 c 0,0.5 3,0.5 3,0 0,0 0,9 0,9 0,0.5 -3,0.5 -3,0 0,0 0,-9 0,-9 z M 12.5,0 C 11,0 11,0.5 11,1 c 0,0 0,1 0,1 0,0.5 3,0.5 3,0 0,0 0,-1 0,-1 0,-0.5 0,-1 -1.5,-1 z"
-         inkscape:connector-curvature="0" />
-    </g>
+<svg width="100" height="100" version="1.1" viewBox="0 0 26.458 26.458" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(0 -270.54)">
+  <rect y="270.54" width="26.458" height="26.458" fill="#f60"/>
+  <text x="5.8712549" y="291.55759" fill="#000000" font-family="sans-serif" font-size="10.646px" letter-spacing="0px" stroke-width=".26614" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="5.8712549" y="291.55759" fill="#ffffff" stroke-width=".26614">7A</tspan></text>
+  <g transform="matrix(.56696 0 0 .56696 9.2604 273.94)" fill="#fff">
+   <path d="m10 0v15h-10v-15zm-1 1h-8v13h8zm-6.5 3h5c0.5 0 0.5 1 0 1h-5c-0.5 0-0.5-1 0-1zm0 2h5c0.5 0 0.5 1 0 1h-5c-0.5 0-0.5-1 0-1zm0 2h5c0.5 0 0.5 1 0 1h-5c-0.5 0-0.5-1 0-1zm0 2h5c0.5 0 0.5 1 0 1h-5c-0.5 0-0.5-1 0-1z"/>
+   <path d="m11 13c0.5 0.5 2.5 0.5 3 0 0 0-1 2-1.5 2s-1.5-2-1.5-2zm0-10c0 0.5 3 0.5 3 0v9c0 0.5-3 0.5-3 0v-9zm1.5-3c-1.5 0-1.5 0.5-1.5 1v1c0 0.5 3 0.5 3 0v-1c0-0.5 0-1-1.5-1z"/>
   </g>
+ </g>
 </svg>

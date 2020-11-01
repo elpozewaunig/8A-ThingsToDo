@@ -1,4 +1,4 @@
-title: 6A
+title: 7A
 subtitle: Things To Do
 logo: /images/school.svg
 icon: /images/icons/icon.svg
