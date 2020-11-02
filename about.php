@@ -121,7 +121,7 @@ div.description {
 
 <div class="content">
   
-<h1> <img src="images/info.svg" height="26px"> About </h1> 
+<h1> <img src="images/fa/info.svg" height="26px"> About </h1> 
   
 <div class="content-block">
   <p>This website was developed by Elias Pozewaunig to help students of class 7A manage their assignments. Several amazing people helped me accomplish this project - <a href="thanks.php">check them out</a>! <br>
@@ -129,8 +129,8 @@ div.description {
   
   <h2>Contact</h2>
     <div class="contact"> Elias Pozewaunig </div>
-    <div class="contact-line"> <img src="images/envelope.svg" height="12px"> <a href="mailto:elias.pozewaunig@it-gymnasium.at" target="_blank">elias.pozewaunig@it-gymnasium.at</a> </div>
-    <div class="contact-line"> <img src="images/github.svg" height="12px"> <a href="https://github.com/elpozewaunig" target="_blank">elpozewaunig</a> </div>
+    <div class="contact-line"> <img src="images/fa/envelope.svg" height="12px"> <a href="mailto:elias.pozewaunig@it-gymnasium.at" target="_blank">elias.pozewaunig@it-gymnasium.at</a> </div>
+    <div class="contact-line"> <img src="images/fa/github.svg" height="12px"> <a href="https://github.com/elpozewaunig" target="_blank">elpozewaunig</a> </div>
   
   <h2>Open Source Licenses</h2>
   <ul>

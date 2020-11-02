@@ -27,17 +27,17 @@ TOPBAR;
 TOPBAR;  
 
 if ($_SESSION['origin'] == "/main.php") {
-  echo '<topitem class="page current"><a href="/main.php"> <img src="/images/edit.svg"> Work </a></topitem>';
+  echo '<topitem class="page current"><a href="/main.php"> <img src="/images/fa/edit.svg"> Work </a></topitem>';
 }
 else {
-  echo '<topitem class="page"><a href="/main.php"> <img src="/images/edit.svg"> Work </a></topitem>';
+  echo '<topitem class="page"><a href="/main.php"> <img src="/images/fa/edit.svg"> Work </a></topitem>';
 }
 
 if ($_SESSION['origin'] == "/conferences.php") {
-  echo '<topitem class="page current"><a href="/conferences.php"> <img src="/images/video.svg"> Conferences </a></topitem>';
+  echo '<topitem class="page current"><a href="/conferences.php"> <img src="/images/fa/video.svg"> Conferences </a></topitem>';
 }
 else {
-  echo '<topitem class="page"><a href="/conferences.php"> <img src="/images/video.svg"> Conferences </a></topitem>';
+  echo '<topitem class="page"><a href="/conferences.php"> <img src="/images/fa/video.svg"> Conferences </a></topitem>';
 }  
   
 echo <<<TOPBAR
@@ -45,7 +45,7 @@ echo <<<TOPBAR
   <topitem class="user-dropdown">
     
     <form method="post" action="set_user.php">
-      <div><img src="/images/user-circle.svg" style="height: 24px; vertical-align: middle;">
+      <div><img src="/images/fa/user-circle.svg" style="height: 24px; vertical-align: middle;">
       <select name="user" title="Select user" onchange="this.form.submit()">
         <option value="all"> Students </option>
         
