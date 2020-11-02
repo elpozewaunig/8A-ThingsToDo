@@ -25,8 +25,20 @@
   background-color: #1c7e4c;
 }
 
+.subject.CH {
+  background-color: #3b7970;
+}
+
+.subject.CHL {
+  background-color: #2d5d56;
+}
+
 .subject.PH {
   background-color: #1c4f7e;
+}
+
+.subject.PUP {
+  background-color: #e05f82;
 }
 
 .subject.GWK {
@@ -41,10 +53,6 @@
   background-color: #4f3f2a;
 }
 
-.subject.PHL {
-  background-color: #13395c;
-}
-
 .subject.REK {
   background-color: #0e0044;
 }
@@ -57,19 +65,11 @@
   background-color: #e490e8;
 }
 
-.subject.INFG-SR {
+.subject.INFD {
   background-color: #7e1c5d;
 }
 
-.subject.INFG-KAM {
-  background-color: #7e1c5d;
-}
-
-.subject.INFW-ROH {
-  background-color: #775b2b;
-}
-
-.subject.INFW-MI {
+.subject.INFH {
   background-color: #775b2b;
 }
 
@@ -85,10 +85,6 @@
   background-color: #3b005b;
 }
 
-.subject.SPA {
-  background-color: #5b0000;
-}
-
 .subject.BSPK {
   background-color: #7d902f;
 }
@@ -97,16 +93,16 @@
   background-color: #7d902f;
 }
 
-.subject.PUP {
+.subject.WPF-SPA {
+  background-color: #5b0000;
+}
+
+.subject.WPF-PUP {
   background-color: #d29cca;
 }
 
 .subject.WPF-ME {
   background-color: #ff79fe;
-}
-
-.subject.WPF-INF {
-  background-color: #55411f;
 }
 
 .subject.WPF-GSPB {
@@ -117,6 +113,6 @@
   background-color: #125c36;
 }
 
-.subject.WPF-SPK {
+.subject.WPF-SPKU {
   background-color: #e2ff6e;
 }
