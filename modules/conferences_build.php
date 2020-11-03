@@ -5,7 +5,7 @@ function conferences_build($input, $user) {
   include 'get_subjects.php';
   include 'constants.php'; // contains array of all subjects
   
-  echo "<table id=\"conferences\">";
+  echo "<table class=\"data-table\" id=\"conferences\">";
   
   if ($user !== "all") {
     $user_subjects = explode(', ', file_get_contents("data/users/$user"));
@@ -58,6 +58,9 @@ function build_cells($line, $subjects) {
         }
         elseif ($i == 3) { // weekday generation
           $output = $output."<td class=\"date\">".prettify_date($cell_array[$i])."</td>";  
+        }
+        elseif ($i == 4) {
+          // Ignore
         }
         else {
             $output = $output."<td>".$cell_array[$i]."</td>"; 

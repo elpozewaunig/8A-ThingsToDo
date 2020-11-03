@@ -3,7 +3,7 @@ form#work_save {
   min-width: 100%;
 }
 
-table {
+table.data-table {
   border-collapse: collapse;
   margin-top: 40px;
   width: 100%;

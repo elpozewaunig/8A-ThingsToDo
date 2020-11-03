@@ -24,7 +24,7 @@ div.topbar {
   position: fixed;
   background-color: #ff9100;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 10;
 }
 
 div.topbar topitem {
@@ -176,12 +176,58 @@ bottomitem img {
   height: 20px;
 }
 
+div.toggle-container {
+  display: flex;
+  margin-top: 50px;
+  width: 100%;
+}
+
+div.toggle {
+  display: inline-block;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #ff8200;
+  color: #ffffff;
+  cursor: pointer;
+
+  white-space: nowrap;
+  text-align: center;
+  
+  transition: all 0.1s ease-in-out;
+}
+
+div.toggle:hover {
+  background-color: #ff7a00;
+}
+
+div.toggle.current {
+  background-color: #ff6a00;
+}
+
+div.toggle img {
+  height: 20px;
+  vertical-align: bottom;
+}
+
+#calendar {
+  display: block;
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 40px auto;
+}
+
 /* Dark theme */
 
 @media (prefers-color-scheme: dark) {
   
   body {
     background-color: #2f2f2f;
+  }
+  
+  #calendar {
+    color: #ffffff;
+    background-color: #222222;
   }
   
 }

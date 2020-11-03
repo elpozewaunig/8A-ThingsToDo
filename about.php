@@ -136,7 +136,11 @@ div.description {
   <ul>
     <li>
       <div class="name"> TableFilter </div>
-      <div class="description"> <a href="https://github.com/koalyptus/TableFilter" target="_blank">TableFilter</a> is the JavaScript library that is used for making tables sortable and filterable. It is licensed under the <a href="https://github.com/koalyptus/TableFilter/blob/master/LICENSE" target="_blank">MIT license</a>.  </div>
+      <div class="description"> <a href="https://github.com/koalyptus/TableFilter" target="_blank">TableFilter</a> is the JavaScript library that is used for making tables sortable and filterable. It is licensed under the <a href="https://github.com/koalyptus/TableFilter/blob/master/LICENSE" target="_blank">MIT license</a>. </div>
+    </li>
+    <li>
+      <div class="name"> FullCalendar </div>
+      <div class="description"> <a href="https://fullcalendar.io" target="_blank">FullCalendar</a> is the JavaScript library that is responsible for rendering a beautiful calender on the frontend. It is licensed under the <a href="https://github.com/fullcalendar/fullcalendar/blob/master/LICENSE.txt" target="_blank">MIT License</a>. </div>
     </li>
     <li>
       <div class="name"> FontAwesome </div>

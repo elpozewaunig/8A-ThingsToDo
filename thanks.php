@@ -104,23 +104,15 @@ span.subject {
   <ul>
     <li>
       <div class="name"> Florian </div>
-      <div class="description"> who provided the student dataset, beta-tested my first version, curated <span class="subject L">L</span> and made feature requests to make this website what it is now </div>
-    </li>
-    <li>
-      <div class="name"> David P </div>
-      <div class="description"> who provided the first assignment dataset </div>
-    </li>
-    <li>
-      <div class="name"> Teresa </div>
-      <div class="description"> Curator of <span class="subject L">L</span> and <span class="subject BSPM">BSPM</span> who also kept me motivated all along </div>
+      <div class="description"> who provided the student dataset, beta-tested my first version and made feature requests to make this website what it is now </div>
     </li>
     <li>
       <div class="name"> Felix </div>
-      <div class="description"> Curator of <span class="subject INFG-KAM">INFG-KAM</span> and <span class="subject INFW-MI">INFW-MI</span> and trusty beta-tester </div>
+      <div class="description"> Trusty beta-tester and feature requester </div>
     </li>
     <li>
-      <div class="name"> Renick </div>
-      <div class="description"> Curator of <span class="subject INFG-KAM">INFG-KAM</span> </div>
+      <div class="name"> Max </div>
+      <div class="description"> who beta-tested new features in amazing detail </div>
     </li>
     <li>
       <div class="name"> Mathias </div>
