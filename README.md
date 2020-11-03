@@ -1,6 +1,6 @@
 # 7A ThingsToDo
 
-This is the source code for running an Apache Server to provide an overview and help coordinate workload for students of class 7A during the Coronavirus break. It features a dynamically generated table tailored to the respective users subjects, the possibility to store progress on the server and also some more goodies, such as a conference calender. For the time being it is specifically tailored to this usecase, but it can easily be customized to more general situations.
+This is the source code for running an Apache Server to provide an overview and help coordinate workload for students of class 7A during the Coronavirus break. It features a dynamically generated table tailored to the respective users subjects, the possibility to store progress on the server and also some more goodies, such as a conference calendar. For the time being it is specifically tailored to this usecase, but it can easily be customized to more general situations.
 
 ## Installation
 Check out [``INSTALL.md``](INSTALL.md) to find out how to install this project.
@@ -28,6 +28,7 @@ In it you can note down work using the following structure:
 Example: ``M | 1 | First assignment | https://www.example.org | 01.01.1994``
 
 The ID must be a unique number or string and once it is set, it may not be changed, as it is used for storing progress.
+You can write a ``#`` symbol instead of a date. If you have created a ``subjects.txt`` file as described below, the next lesson after school start will be calculated as the deadline.
 
 ### Users
 Within the ``data`` folder, create a folder called ``users``. Create files named like the user (without a file extension). Enter the subjects for this user, separated by a comma. You can optionally also enter groups in square brackets.
@@ -53,7 +54,9 @@ To change the school start date, simply change the value of ``school_start`` in 
 To add conferences, create a folder called ``conferences`` within the ``data`` folder. Place a file called ``conferences.txt`` into this folder.
 In it you can note down upcoming conferences using the following structure:
 
-Subject | Description | Link | Date (DD.MM.YYY, hh:mm)
+Subject | Description | Link | Start time (DD.MM.YYYY, hh:mm) | Optional: End time (DD.MM.YYYY, hh:mm)
+
+You can omit the end time and the calendar will display it as a one hour block. You can write a ``#`` symbol instead of a date and the end time will be calculated using the default lesson length.
 
 ## Customization
 
