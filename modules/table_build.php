@@ -42,10 +42,25 @@ function table_build($input, $user) {
   
   $subjects_meta = file('data/subjects/subjects.txt');
   
+  $table = "";
+  
   foreach ($input as $l) {
     if ($l!==PHP_EOL) {
-      echo build_cells($l, $subjects, $include_progress, $progress_array, $subjects_meta);
+      $table = $table.build_cells($l, $subjects, $include_progress, $progress_array, $subjects_meta);
     }
+  }
+  
+  if($table !== "") {
+    echo $table;
+  }
+  else {
+    if($include_progress) {
+      $message_colspan = 5;
+    }
+    else {
+      $message_colspan = 4;
+    }
+    echo "<tr><td colspan=\"".$message_colspan."\"> No work has been assigned yet. Yay! </td></tr>";
   }
   
   echo "</tbody>";
