@@ -184,6 +184,7 @@ div.toggle-container {
 
 div.toggle {
   display: inline-block;
+  font-weight: bold;
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
