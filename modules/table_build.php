@@ -127,7 +127,7 @@ function build_cells($line, $subjects, $include_progress, $progress, $subjects_m
 }
 
 function first_lesson($subject_array, $subject) { // resolves # as next lesson, after school start
-    $nextschoolday = mktime(0, 0, 0, 6, 3, 2020); // 03.06.2020
+    $nextschoolday = strtotime(school_start); // defined in config.txt
     
     foreach ($subject_array as $l) {
       $line_array = str_getcsv($l, '|');

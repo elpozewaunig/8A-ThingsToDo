@@ -47,6 +47,8 @@ Within the ``data`` folder, a folder named ``subjects`` can be created. Within i
 
 Subject | 3-letter-weekdays separated by commas (Mon, Tue, ...)
 
+To change the school start date, simply change the value of ``school_start`` in [``config.txt``](config.txt). It can be written in American notation using slashes (/) or European notation using dashes (-).
+
 ### Conferences
 To add conferences, create a folder called ``conferences`` within the ``data`` folder. Place a file called ``conferences.txt`` into this folder.
 In it you can note down upcoming conferences using the following structure:
