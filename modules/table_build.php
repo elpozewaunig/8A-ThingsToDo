@@ -19,7 +19,7 @@ function table_build($input, $user) {
     $subjects = SUBJECTS; // subjects as defined in constants.php
   }
   
-  echo "<thead><tr>";
+  echo "<thead class=\"column-titles\"><tr>";
   
   if ($include_progress) {
     echo"<th> ✓ </th>";

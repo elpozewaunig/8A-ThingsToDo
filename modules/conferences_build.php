@@ -15,7 +15,7 @@ function conferences_build($input, $user) {
     $subjects = SUBJECTS; // subjects as defined in constants.php
   }
   
-  echo "<thead><tr>";
+  echo "<thead class=\"column-titles\"><tr>";
   
   echo "<th id=\"th-subjects\"> Subject </th><th> Description </th><th> Link </th><th> Date </th>";
   echo "</tr></thead>";
