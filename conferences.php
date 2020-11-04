@@ -138,6 +138,9 @@ conferences_build($conferences, $user);
           window.open(event.event.url, "_blank");
           }
       },
+      eventMouseEnter: function(mouseEnterInfo) {
+        mouseEnterInfo.el.setAttribute('title', mouseEnterInfo.event.title);
+      },
       height: 'auto',
       initialView: 'timeGridWeek',
       locale: 'de',
