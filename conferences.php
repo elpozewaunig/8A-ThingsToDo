@@ -172,7 +172,8 @@ conferences_build($conferences, $user);
       slotDuration: '00:20:00',
       slotMinTime: '07:00:00',
       slotMaxTime: '14:00:00',
-      allDaySlot: false
+      allDaySlot: false,
+      nowIndicator: true
     });
     calendar.render();
     document.getElementById("calendar").style.display = "none";
