@@ -129,6 +129,11 @@ conferences_build($conferences, $user);
       events: [
         <?php 
         include "modules/jsonify_conferences.php";
+        
+        if (file_exists('data/conferences/archive.txt')) {
+          $archive = file('data/conferences/archive.txt');
+          echo jsonify_conferences($archive, $user).",";
+        }
         echo jsonify_conferences($conferences, $user);
          ?>
         ],

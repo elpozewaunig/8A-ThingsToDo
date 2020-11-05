@@ -58,6 +58,8 @@ Subject | Description | Link | Start time (DD.MM.YYYY, hh:mm) | Optional: End ti
 
 You can omit the end time and the calendar will display it as a one hour block. You can write a ``#`` symbol instead of a date and the end time will be calculated using the default lesson length.
 
+Optionally you can create a file called ``archive.txt``. Past conferences are not automatically hidden by the code, so that rejoining extended video conferences is less of a hassle. Since they need to be removed manually, it can be desired that they still stay visible on the calendar. You can achieve this by pasting past conferences into said ``archive.txt`` file.
+
 ## Customization
 
 ### Contact & Thanks
