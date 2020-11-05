@@ -50,7 +50,7 @@ function build_event($line, $subjects) {
       }
       elseif($i == 4) {
         if(trim($cell_array[$i]) == '#') {
-          $output = $output."end: '".convert_date(add_to_date($cell_array[3], "+50 minutes"))."'";
+          $output = $output."end: '".convert_date(add_to_date($cell_array[3], "+".lesson_length))."'"; // lesson length is defined in config.txt
         }
         else {
           $output = $output."end: '".convert_date($cell_array[$i])."'";
