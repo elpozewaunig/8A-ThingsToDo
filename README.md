@@ -78,4 +78,5 @@ If you want to change links, you can simply swap out minor portions of text at [
 
 ## Open Source Licenses
 * [TableFilter](https://github.com/koalyptus/TableFilter), a JavaScript library that allows tables to be filtered and sorted, is used in the frontend. It is licensed under the MIT License.
+* [FullCalendar](https://github.com/fullcalendar/fullcalendar), a JavaScript library that renders beautiful, feature-rich calendars, is used in the frontened. It is licensed under the MIT License.
 * [FontAwesome](https://fontawesome.com) is the origin of the website icons, all of which are licensed under Creative Commons BY 4.0.
