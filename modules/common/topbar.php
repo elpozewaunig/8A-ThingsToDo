@@ -27,18 +27,20 @@ TOPBAR;
 TOPBAR;  
 
 if ($_SESSION['origin'] == "/main.php") {
-  echo '<topitem class="page current"><a href="/main.php"> <img src="/images/fa/edit.svg"> Work </a></topitem>';
+  $current_class = " current";
 }
 else {
-  echo '<topitem class="page"><a href="/main.php"> <img src="/images/fa/edit.svg"> Work </a></topitem>';
+  $current_class = "";
 }
+echo '<topitem class="page'.$current_class.'"><a href="/main.php"> <img src="/images/fa/edit.svg"> Work </a></topitem>';
 
 if ($_SESSION['origin'] == "/conferences.php") {
-  echo '<topitem class="page current"><a href="/conferences.php"> <img src="/images/fa/video.svg"> Conferences </a></topitem>';
+  $current_class = " current";
 }
 else {
-  echo '<topitem class="page"><a href="/conferences.php"> <img src="/images/fa/video.svg"> Conferences </a></topitem>';
-}  
+  $current_class = "";
+}
+echo '<topitem class="page'.$current_class.'"><a href="/conferences.php"> <img src="/images/fa/video.svg"> Conferences </a></topitem>';
   
 echo <<<TOPBAR
   
