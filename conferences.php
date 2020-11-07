@@ -179,7 +179,7 @@ conferences_build($conferences, $user);
       hiddenDays: [0, 6],
       slotDuration: '00:20:00',
       slotMinTime: '07:00:00',
-      slotMaxTime: '14:00:00',
+      slotMaxTime: '17:00:00',
       allDaySlot: false,
       nowIndicator: true
     });
