@@ -175,7 +175,7 @@ conferences_build($conferences, $user);
         hour12: false,
         meridiem: false
       },
-      firstDay: 1,
+      firstDay: 6,
       hiddenDays: [0, 6],
       slotDuration: '00:20:00',
       slotMinTime: '07:00:00',
