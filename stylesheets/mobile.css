@@ -1,0 +1,57 @@
+@media only screen and (max-width: 720px) {
+  
+  div.topbar topitem.page span {
+    display: none;
+  }
+  
+  table.data-table {
+    display: block;
+    max-width: calc(100vw);
+    overflow: auto;
+  }
+  
+  form
+  
+  table#conferences {
+    margin-top: 20px;
+  }
+  
+  div#calendar {
+    margin-top: 20px;
+  }
+  
+}
+
+@media only screen and (max-width: 580px) {
+  
+  div.topbar topitem.header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  div.topbar topitem.label {
+    display: none;
+  }
+  
+  topitem.user-dropdown select {
+    padding-right: 0px;
+  }
+  
+  div.content {
+    padding-bottom: 200px;
+  }
+  
+  div.bottombar {
+    flex-flow: column;
+  }
+  
+  div.bottombar bottomitem a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  div.toggle-container {
+    margin-top: 35px;
+  }
+  
+}

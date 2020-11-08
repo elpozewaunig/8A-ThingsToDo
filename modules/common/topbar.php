@@ -32,7 +32,7 @@ if ($_SESSION['origin'] == "/main.php") {
 else {
   $current_class = "";
 }
-echo '<topitem class="page'.$current_class.'"><a href="/main.php"> <img src="/images/fa/edit.svg"> Work </a></topitem>';
+echo '<topitem class="page'.$current_class.'"><a href="/main.php"> <img src="/images/fa/edit.svg"> <span> Work </span> </a></topitem>';
 
 if ($_SESSION['origin'] == "/conferences.php") {
   $current_class = " current";
@@ -40,7 +40,7 @@ if ($_SESSION['origin'] == "/conferences.php") {
 else {
   $current_class = "";
 }
-echo '<topitem class="page'.$current_class.'"><a href="/conferences.php"> <img src="/images/fa/video.svg"> Conferences </a></topitem>';
+echo '<topitem class="page'.$current_class.'"><a href="/conferences.php"> <img src="/images/fa/video.svg"> <span> Conferences </span> </a></topitem>';
   
 echo <<<TOPBAR
   

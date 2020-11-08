@@ -11,3 +11,11 @@
 .fc-button.fc-button-active {
   background-color: #ff5400 !important;
 }
+
+h2.fc-toolbar-title {
+  text-align: center;
+}
+
+div.fc-toolbar-chunk {
+  text-align: center;
+}

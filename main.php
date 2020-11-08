@@ -10,12 +10,14 @@ check_user();
 <head>
 <title> <?= title ?> - <?= subtitle ?> </title>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="icon" href="<?= icon ?>">
 <link rel="apple-touch-icon" href="<?= touch_icon ?>">
 
 <?php
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/common.css')."\">";
+echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/mobile.css')."\">";
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/table.css')."\">";
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/tablefilter_override.css')."\">";
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/subjects.css')."\">";

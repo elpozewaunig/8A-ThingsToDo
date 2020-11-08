@@ -34,7 +34,7 @@ if (isset($_SESSION['login_successful'])) {
 <html>
 <head>
 <meta charset="utf-8">
-  
+
 <title> <?= title ?> - <?= subtitle ?> </title>
 
 <link rel="icon" href="<?= icon ?>">

@@ -1,6 +1,6 @@
 form#work_save {
   display: inline-block;
-  min-width: 100%;
+  width: 100%;
 }
 
 table.data-table {
