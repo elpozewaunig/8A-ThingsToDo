@@ -1,8 +1,12 @@
-.subject {
+span.subject {
   padding: 5px;
   border-radius: 3px;
   color: #ffffff;
   white-space: nowrap;
+}
+
+a.subject {
+  border-color: transparent;
 }
 
 .subject.KV {

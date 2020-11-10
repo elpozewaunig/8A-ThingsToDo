@@ -39,6 +39,7 @@ function build_event($line, $subjects) {
       
       if($i == 0) {
         $output = $output."title: '".$cell_array[$i]." - ".$cell_array[1]."', ";
+        $output = $output."classNames: ['subject', '".$cell_array[$i]."'], ";
       }
       elseif($i == 2) {
         if(trim($cell_array[$i]) !== "") {
