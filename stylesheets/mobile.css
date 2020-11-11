@@ -9,9 +9,7 @@
     max-width: calc(100vw);
     overflow: auto;
   }
-  
-  form
-  
+
   table#conferences {
     margin-top: 20px;
   }

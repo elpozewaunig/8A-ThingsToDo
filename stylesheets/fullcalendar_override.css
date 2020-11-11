@@ -12,6 +12,10 @@
   background-color: #ff5400 !important;
 }
 
+.fc-event {
+  overflow: hidden;
+}
+
 h2.fc-toolbar-title {
   text-align: center;
 }
