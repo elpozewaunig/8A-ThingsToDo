@@ -6,6 +6,11 @@ Order Allow,Deny
 Deny from All
 </Files>
 
+<Files "config.txt">  
+Order Allow,Deny
+Deny from All
+</Files>
+
 <Files ".gitignore">  
 Order Allow,Deny
 Deny from All
