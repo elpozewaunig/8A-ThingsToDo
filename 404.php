@@ -16,7 +16,7 @@ check_user();
   
   <?php
   echo "<link rel=\"stylesheet\" href=\"".versionify('/stylesheets/common.css')."\">";
-  echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/mobile.css')."\">";
+  echo "<link rel=\"stylesheet\" href=\"".versionify('/stylesheets/mobile.css')."\">";
   ?>
 
   <style>
