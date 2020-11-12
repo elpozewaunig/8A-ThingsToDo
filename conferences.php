@@ -47,7 +47,7 @@ generate_topbar();
 
 <div class="toggle-container">
   <div class="toggle current" id="toggle-list" onclick="toggleMode('list')"> <img src="images/fa/list-ul.svg"> List </div>
-  <div class="toggle" id="toggle-calendar" onclick="toggleMode('calendar')"> <img src="images/fa/calendar-alt.svg"> Calendar </div>
+  <div class="toggle" id="toggle-calendar" onclick="toggleMode('calendar')"> <img src="images/fa/calendar-alt.svg"> Calendar <noscript>< (Needs JavaScript) </noscript> </div>
 </div>
 
 <script>
@@ -122,7 +122,7 @@ conferences_build($conferences, $user);
 </script>
 </div>
 
-<div id="calendar"></div>
+<div id="calendar"> <noscript> Calendar view needs JavaScript enabled to work. </noscript> </div>
 
 <script>
   window.onload = function(){
