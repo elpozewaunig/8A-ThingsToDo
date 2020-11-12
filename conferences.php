@@ -47,7 +47,7 @@ generate_topbar();
 
 <div class="toggle-container">
   <div class="toggle current" id="toggle-list" onclick="toggleMode('list')"> <img src="images/fa/list-ul.svg"> List </div>
-  <div class="toggle" id="toggle-calendar" onclick="toggleMode('calendar')"> <img src="images/fa/calendar-alt.svg"> Calendar <noscript>< (Needs JavaScript) </noscript> </div>
+  <div class="toggle" id="toggle-calendar" onclick="toggleMode('calendar')"> <img src="images/fa/calendar-alt.svg"> Calendar <noscript> (Needs JavaScript) </noscript> </div>
 </div>
 
 <script>
@@ -76,9 +76,9 @@ generate_topbar();
 <div id="list">
 <?php 
 include 'modules/conferences_build.php';
-  
+
 $conferences = file('data/conferences/conferences.txt');
-      
+
 if (isset($_COOKIE['user']) == false) {
   $user = "all";
 }
@@ -120,6 +120,7 @@ conferences_build($conferences, $user);
     tf.init();
 
 </script>
+
 </div>
 
 <div id="calendar"> <noscript> Calendar view needs JavaScript enabled to work. </noscript> </div>
@@ -189,6 +190,23 @@ conferences_build($conferences, $user);
     calendar.render();
     document.getElementById("calendar").style.display = "none";
   };
+</script>
+
+<div class="subscribe">  
+<?php
+echo '<a href="webcal://'.$_SERVER['HTTP_HOST'].'/ics.php?user='.$user.'" onclick="copy(this.getAttribute(\'href\'))"> <img src="images/fa/plus-square.svg"> Subscribe to this calendar </a>';
+echo '<a href="ics.php?user='.$user.'" download="'.title.'_Conferences_'.$user.'.ics"> <img src="images/fa/download.svg"> Download calendar </a>';
+?> 
+</div>
+
+<script>
+function copy(text) {
+  navigator.clipboard.writeText(text).then(function() {
+    alert("The link has been copied to clipboard and can be pasted in an application.");
+  },
+  function() {  
+  });
+}
 </script>
 
 </div>

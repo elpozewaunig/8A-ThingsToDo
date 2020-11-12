@@ -47,14 +47,14 @@ function build_event($line, $subjects) {
         }
       }
       elseif($i == 3) {
-        $output = $output."start: '".convert_date($cell_array[$i])."', ";
+        $output = $output."start: '".jsonify_date($cell_array[$i])."', ";
       }
       elseif($i == 4) {
         if(trim($cell_array[$i]) == '#') {
-          $output = $output."end: '".convert_date(add_to_date($cell_array[3], "+".lesson_length))."'"; // lesson length is defined in config.txt
+          $output = $output."end: '".jsonify_date(add_to_date($cell_array[3], "+".lesson_length))."'"; // lesson length is defined in config.txt
         }
         else {
-          $output = $output."end: '".convert_date($cell_array[$i])."'";
+          $output = $output."end: '".jsonify_date($cell_array[$i])."'";
         }
       }
       
@@ -66,7 +66,7 @@ function build_event($line, $subjects) {
   return $output;
 }
 
-function convert_date($datestring) {
+function jsonify_date($datestring) {
   $timestamp = date_timestamp_get( date_create_from_format("d.m.Y, H:i", trim($datestring)) );
   $converted_date = date("Y-m-d", $timestamp)."T".date("H:i:s", $timestamp);
   

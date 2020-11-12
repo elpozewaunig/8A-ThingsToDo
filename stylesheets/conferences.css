@@ -5,6 +5,33 @@
   white-space: nowrap;
 }
 
+div.subscribe {
+  display: block;
+  margin-top: 10px;
+}
+
+div.subscribe a {
+  display: inline-block;
+  margin: 5px;
+  color: #ffffff;
+  background-color: #ff9100;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  
+  transition: all 0.1s ease-in-out;
+}
+
+div.subscribe a:hover {
+  background-color: #ff6a00;
+}
+
+div.subscribe a img {
+  height: 20px;
+  vertical-align: bottom;
+}
+
 table#conferences td {
   padding: 15px;
 }
