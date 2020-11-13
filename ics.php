@@ -2,6 +2,8 @@
 include 'modules/common/master_include.php';
 include 'modules/icalify_conferences.php';
 
+header('Content-Type: text/calendar');
+
 $conferences = file('data/conferences/conferences.txt');
 
 $users = get_users();
