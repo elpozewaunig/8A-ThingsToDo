@@ -6,9 +6,7 @@ header('Content-Type: text/calendar');
 
 $conferences = file('data/conferences/conferences.txt');
 
-$users = get_users();
-
-if(isset($_GET['user']) && in_array($_GET['user'], $users)) {
+if(isset($_GET['user']) && valid_user($_GET['user'])) {
   $user = $_GET['user'];
 }
 else {

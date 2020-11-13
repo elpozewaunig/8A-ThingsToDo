@@ -79,7 +79,7 @@ include 'modules/conferences_build.php';
 
 $conferences = file('data/conferences/conferences.txt');
 
-if (isset($_COOKIE['user']) == false) {
+if (isset($_COOKIE['user']) == false || valid_user($_COOKIE['user']) == false) {
   $user = "all";
 }
 else {
