@@ -56,6 +56,7 @@ div.name {
   color: #ffffff;
   background-color: #ff5400;
   padding: 5px;
+  margin-right: 5px;
   border-radius: 5px;
   font-weight: bold;
   display: inline-block;
@@ -106,11 +107,15 @@ span.subject {
   <ul>
     <li>
       <div class="name"> Florian </div>
-      <div class="description"> who provided the student dataset, beta-tested my first version and made feature requests to make this website what it is now </div>
+      <div class="description"> who provided the student dataset, curated <span class="subject L">L</span>, beta-tested my first version and made feature requests to make this website what it is now </div>
     </li>
     <li>
       <div class="name"> Felix </div>
-      <div class="description"> Trusty beta-tester and feature requester </div>
+      <div class="description"> Trusty beta-tester and feature requester, reporter of missing assignments </div>
+    </li>
+    <li>
+      <div class="name"> Teresa </div>
+      <div class="description"> curator of <span class="subject L">L</span> and yoga guru </div>
     </li>
     <li>
       <div class="name"> Max </div>
@@ -119,6 +124,10 @@ span.subject {
     <li>
       <div class="name"> Mathias </div>
       <div class="description"> Initial beta-tester </div>
+    </li>
+    <li>
+      <div class="name"> Alex </div><div class="name"> Lauren </div><div class="name"> Maxi </div>
+      <div class="description"> who notified me of a few missing assignments </div>
     </li>
   </ul>
   
