@@ -6,6 +6,7 @@ function table_build($input, $user) {
   include 'constants.php'; // contains array of all subjects
   
   echo "<form id=\"work_save\" action=\"push_progress.php\" method=\"post\">";
+  echo "<input type=\"hidden\" name=\"username\"  value=\"$user\">";
   echo "<table class=\"data-table\" id=\"work\">";
   
   $include_progress = false;
