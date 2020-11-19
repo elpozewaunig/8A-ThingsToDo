@@ -47,6 +47,13 @@ echo <<<TOPBAR
   <topitem class="user-dropdown">
     
     <form method="post" action="set_user.php">
+      <input type="hidden" name="origin" value="
+TOPBAR;
+
+echo $_SERVER['PHP_SELF'];
+
+echo <<<TOPBAR
+      ">
       <div><img src="/images/fa/user-circle.svg" style="height: 24px; vertical-align: middle;">
       <select name="user" title="Select user" onchange="this.form.submit()">
         <option value="all"> Students </option>

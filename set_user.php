@@ -15,8 +15,8 @@ if(isset($_POST['user'])) {
   setcookie("user", $user);
 }
 
-if (isset($_SESSION['origin'])) {
-  header("Location: ".$_SESSION['origin']);
+if (isset($_POST['origin'])) {
+  header("Location: ".$_POST['origin']);
 }
 else {
   header("Location: main.php");
