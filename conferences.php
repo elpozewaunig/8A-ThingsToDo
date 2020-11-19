@@ -195,7 +195,7 @@ conferences_build($conferences, $user);
 <div class="subscribe">  
 <?php
 echo '<a href="webcal://'.$_SERVER['HTTP_HOST'].'/ics.php?user='.$user.'" onclick="copy(this.getAttribute(\'href\'))"> <img src="images/fa/plus-square.svg"> Subscribe to this calendar </a>';
-echo '<a href="ics.php?user='.$user.'" download="'.title.'_Conferences_'.$user.'.ics"> <img src="images/fa/download.svg"> Download calendar </a>';
+echo '<a href="ics.php?user='.$user.'"> <img src="images/fa/download.svg"> Download calendar </a>';
 ?> 
 </div>
 
