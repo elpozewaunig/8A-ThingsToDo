@@ -199,6 +199,14 @@ div.toggle {
   transition: all 0.1s ease-in-out;
 }
 
+div.toggle:first-child {
+  border-radius: 5px 0px 0px 5px;
+}
+
+div.toggle:last-child {
+  border-radius: 0px 5px 5px 0px;
+}
+
 div.toggle:hover {
   background-color: #ff7a00;
 }
