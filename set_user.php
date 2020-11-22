@@ -2,11 +2,12 @@
 session_start(); 
 
 include 'modules/common/userlist_build.php';
+include 'modules/common/check_login.php';
 
 $user_array = get_users();
 
 if(isset($_POST['user'])) {
-  if(in_array($_POST['user'], $user_array)) { // checks if user is valid
+  if(valid_user($_POST['user'])) { // checks if user is valid
     $user = $_POST['user'];
   }
   else {
