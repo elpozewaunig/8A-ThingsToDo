@@ -156,7 +156,7 @@ function first_lesson($subject_array, $subject) { // resolves # as next lesson, 
 
 function prettify_resource($resource) {
   if (filter_var($resource, FILTER_VALIDATE_URL)) { // check if resource is URL
-    $prettified_resource = "<a href=\"".$resource."\" target=\"_blank\">".$resource."</a>";
+    $prettified_resource = "<a href=\"".$resource."\" target=\"_blank\">".htmlspecialchars($resource)."</a>";
   }
   else {
     $prettified_resource = $resource;

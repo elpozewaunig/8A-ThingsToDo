@@ -86,7 +86,7 @@ function prettify_resource($resource) {
       $prettified_resource = "<a href=\"".$resource."\" target=\"_blank\" class=\"link-button discord\"><img src=\"images/discord.svg\" height=\"16px\"> Open in Discord </a>";
     }
     else {
-      $prettified_resource = "<a href=\"".$resource."\" target=\"_blank\">".$resource."</a>";
+      $prettified_resource = "<a href=\"".$resource."\" target=\"_blank\">".htmlspecialchars($resource)."</a>";
     }
   }
   elseif (trim($resource) == "") {
