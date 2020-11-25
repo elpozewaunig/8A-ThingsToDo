@@ -111,11 +111,11 @@ span.subject {
     </li>
     <li>
       <div class="name"> Felix </div>
-      <div class="description"> Trusty beta-tester and feature requester, reporter of missing assignments </div>
+      <div class="description"> Trusty beta-tester and feature requester, reporter of missing assignments, curator of <span class="subject WPF-SPA">WPF-SPA</span> </div>
     </li>
     <li>
       <div class="name"> Teresa </div>
-      <div class="description"> curator of <span class="subject L">L</span> and yoga guru </div>
+      <div class="description"> yoga guru and curator of <span class="subject L">L</span> and <span class="subject BSPM">BSPM</span> </div>
     </li>
     <li>
       <div class="name"> Max </div>
