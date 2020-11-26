@@ -3,6 +3,7 @@
   border-radius: 5px;
   color: #ffffff;
   white-space: nowrap;
+  word-break: normal;
 }
 
 div.subscribe {
