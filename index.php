@@ -54,7 +54,7 @@ echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/login.css')."\">
   <div class="login">
     <div class="headerbar">
       <img src="images/triangle.svg" style="height: 15vw; position: absolute; left: 0; top: 0;">
-    <h1><img src="<?= logo ?>" style="height: 8vw; vertical-align: baseline;"> <?= title ?> </h1>
+    <h1><img src="<?= logo ?>" class="logo"> <?= title ?> </h1>
     <h2> <?= subtitle ?> </h2>
   </div>
   <h3>Login here first</h3>
