@@ -51,6 +51,16 @@ generate_topbar();
 </div>
 
 <script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if( typeof sessionStorage.getItem('conferences-tab') == 'string') {
+      toggleMode(sessionStorage.getItem('conferences-tab'));
+    }
+    else {
+      toggleMode('list');
+    }
+ 	}, false);
+
   function toggleMode(element) {
     if (element == "list") {
       activate = "list";
@@ -60,6 +70,9 @@ generate_topbar();
       activate = "calendar";
       disable = "list";
     }
+
+      sessionStorage.setItem('conferences-tab', activate);
+    
       var activate_el = document.getElementById(activate);
       var disable_el = document.getElementById(disable);
       activate_el.style.display = "block";
@@ -69,7 +82,6 @@ generate_topbar();
       var toggle_disable = document.getElementById("toggle-"+disable);
       toggle_activate.classList.add("current");
       toggle_disable.classList.remove("current");
-      
   }
 </script>
 
@@ -142,7 +154,7 @@ conferences_build($conferences, $user);
         ],
       eventClick: function(event) {
         if (event.event.url) {
-          event.jsEvent.preventDefault()
+          event.jsEvent.preventDefault();
           window.open(event.event.url, "_blank");
           }
       },
@@ -188,7 +200,6 @@ conferences_build($conferences, $user);
       nowIndicator: true
     });
     calendar.render();
-    document.getElementById("calendar").style.display = "none";
   };
 </script>
 
