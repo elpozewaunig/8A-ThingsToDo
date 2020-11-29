@@ -82,6 +82,9 @@ generate_topbar();
       var toggle_disable = document.getElementById("toggle-"+disable);
       toggle_activate.classList.add("current");
       toggle_disable.classList.remove("current");
+      
+      var renderEvent = new Event('render');
+      activate_el.dispatchEvent(renderEvent);
   }
 </script>
 
@@ -138,7 +141,9 @@ conferences_build($conferences, $user);
 <div id="calendar"> <noscript> Calendar view needs JavaScript enabled to work. </noscript> </div>
 
 <script>
-  window.onload = function(){
+  var listenEl = document.getElementById('calendar');
+
+  listenEl.addEventListener('render', function(){
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
       events: [
@@ -200,7 +205,8 @@ conferences_build($conferences, $user);
       nowIndicator: true
     });
     calendar.render();
-  };
+    
+  }, false);
 </script>
 
 <div class="subscribe">  
