@@ -2,6 +2,16 @@
 include 'modules/common/master_include.php';
 check_login();
 check_user();
+
+if(isset($_SESSION['save_success'])) {
+  if($_SESSION['save_success']) {
+    $save_success = true;
+  }
+  else {
+    $save_success = false;
+  }
+  unset($_SESSION['save_success']);
+}
 ?>
 
 <!DOCTYPE html>
@@ -52,6 +62,38 @@ else {
 }
 
 table_build($work, $user);
+
+if(isset($save_success)) {
+  
+echo <<<SAVE_MESSAGE
+<script>
+var element = document.getElementById('
+SAVE_MESSAGE;
+
+if($save_success) {
+  echo "success";
+}
+else {
+  echo "error";
+}
+
+echo <<<SAVE_MESSAGE
+');
+element.style.display = "block";
+element.style.opacity = 1;
+
+setTimeout( function() {
+  element.style.transition = "opacity 0.5s ease-in-out";
+  element.style.opacity = 0;
+  setTimeout( function() {
+    element.style.display = "none";
+  }, 500)
+}, 4000);
+</script>
+SAVE_MESSAGE;
+
+}
+
 ?>
 
 <script src="node_modules/tablefilter/dist/tablefilter/tablefilter.js"></script>

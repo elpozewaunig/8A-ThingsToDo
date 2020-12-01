@@ -67,7 +67,15 @@ function table_build($input, $user) {
   echo "</tbody>";
   echo "</table>";
   if ($include_progress) {
+    echo "<div class=\"save-bar\">";
+    
+    echo "<div class=\"save-confirmation\">";
+    echo "<span id=\"success\"><img src=\"images/fa/check.svg\"> Saved! </span>";
+    echo "<span id=\"error\"><img src=\"images/fa/times.svg\"> Something went wrong </span>";
+    echo "</div>";
+    
     echo "<input class=\"progress-submit\" type=\"submit\" value=\"💾\" title=\"Save\">";
+    echo "</div>";
   }
   echo "</form>";
 }

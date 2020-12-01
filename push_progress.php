@@ -8,6 +8,8 @@ session_start();
 
 if(valid_login()) {
   
+  $_SESSION['save_success'] = false;
+  
   $id_array = get_work_ids(); 
   
   if ( isset($_POST['progress']) && empty(array_diff($_POST['progress'], $id_array)) ) { // checks if only valid work IDs are being saved
@@ -18,6 +20,8 @@ if(valid_login()) {
       
       $handle = fopen("data/progress/$user", "w");
       fwrite($handle, implode(',', $progress));
+      
+      $_SESSION['save_success'] = true;
       
       setcookie("user", $user); // always return to user that the work has been saved for to avoid confusion
       
