@@ -107,7 +107,7 @@ span.subject {
   <ul>
     <li>
       <div class="name"> Florian </div>
-      <div class="description"> who provided the student dataset, curated <span class="subject L">L</span>, beta-tested my first version and made feature requests to make this website what it is now </div>
+      <div class="description"> who provided the student dataset, curated <span class="subject L">L</span> and <span class="subject REE">REE</span>, beta-tested my first version and made feature requests to make this website what it is now </div>
     </li>
     <li>
       <div class="name"> Felix </div>
@@ -123,7 +123,7 @@ span.subject {
     </li>
     <li>
       <div class="name"> Mathias </div>
-      <div class="description"> Initial beta-tester </div>
+      <div class="description"> Initial beta-tester, reporter of missing assingments </div>
     </li>
     <li>
       <div class="name"> Alex </div><div class="name"> Lauren </div><div class="name"> Maxi </div>
