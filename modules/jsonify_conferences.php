@@ -42,7 +42,7 @@ function build_event($line, $subjects) {
         $output = $output."classNames: ['subject', '".$cell_array[$i]."'], ";
       }
       elseif($i == 2) {
-        if(trim($cell_array[$i]) !== "") {
+        if(filter_var(trim($cell_array[$i]), FILTER_VALIDATE_URL)) {
           $output = $output."url: '".$cell_array[$i]."', ";
         }
       }

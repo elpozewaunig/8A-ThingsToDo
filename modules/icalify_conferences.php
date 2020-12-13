@@ -46,7 +46,7 @@ function build_event($line, $subjects) {
     $output = $output."SUMMARY:".trim($cell_array[0])." - ".trim($cell_array[1])."\r\n";
     $output = $output."DESCRIPTION:".trim($cell_array[1])."\r\n";
         
-    if(trim($cell_array[2]) !== "") {
+    if(filter_var(trim($cell_array[2]), FILTER_VALIDATE_URL)) {
       $output = $output."URL:".trim($cell_array[2])."\r\n";
     }
     
