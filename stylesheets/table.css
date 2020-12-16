@@ -67,6 +67,8 @@ div.save-bar {
   position: sticky;
   margin-top: 10px;
   bottom: 10px;
+
+  pointer-events: none;
 }
 
 div.save-confirmation {
@@ -102,6 +104,7 @@ div.save-confirmation span img {
 
 input.progress-submit {
   display: table-cell;
+  pointer-events: auto;
   margin-right: 10px;
   
   border-radius: 50%;
