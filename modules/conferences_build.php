@@ -51,7 +51,7 @@ function build_cells($line, $subjects) {
       for ($i = 0; $i < count($cell_array); $i++) { // cycles through every element of one line
       
         if ($i == 0) { // subject generation
-          $output = $output."<td> <span class=\"subject ". trim($cell_array[$i])."\">".$cell_array[$i]."</span> </td>"; 
+          $output = $output."<td> <span class=\"subject ". trim($cell_array[$i])."\">".trim($cell_array[$i])."</span> </td>"; 
         }
         elseif ($i == 2) { // resource generation
           $output = $output."<td>".prettify_resource( trim($cell_array[$i]) )."</td>";  
@@ -63,7 +63,7 @@ function build_cells($line, $subjects) {
           // Ignore
         }
         else {
-            $output = $output."<td>".$cell_array[$i]."</td>"; 
+            $output = $output."<td>".trim($cell_array[$i])."</td>"; 
         }  
         
       }

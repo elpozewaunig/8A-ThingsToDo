@@ -109,7 +109,7 @@ function build_cells($line, $subjects, $include_progress, $progress, $subjects_m
       if ($i !== 1) { // skip id
         
         if ($i == 0) { // subject generation
-          $output = $output."<td> <span class=\"subject ". trim($cell_array[$i])."\">".$cell_array[$i]."</span> </td>"; 
+          $output = $output."<td> <span class=\"subject ". trim($cell_array[$i])."\">".trim($cell_array[$i])."</span> </td>"; 
         }
         elseif ($i == 3) { // resource generation
           $output = $output."<td>".prettify_resource( trim($cell_array[$i]) )."</td>";  
@@ -119,11 +119,11 @@ function build_cells($line, $subjects, $include_progress, $progress, $subjects_m
             $output = $output."<td>".first_lesson($subjects_meta, $cell_array[0])."</td>";
           }
           else {
-            $output = $output."<td>".$cell_array[$i]."</td>"; 
+            $output = $output."<td>".trim($cell_array[$i])."</td>"; 
           }
         }     
         else {
-          $output = $output."<td>".$cell_array[$i]."</td>"; 
+          $output = $output."<td>".trim($cell_array[$i])."</td>"; 
         }
         
       }

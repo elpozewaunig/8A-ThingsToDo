@@ -38,12 +38,12 @@ function build_event($line, $subjects) {
     for ($i = 0; $i < count($cell_array); $i++) { // cycles through every element of one line
       
       if($i == 0) {
-        $output = $output."title: '".$cell_array[$i]." - ".$cell_array[1]."', ";
-        $output = $output."classNames: ['subject', '".$cell_array[$i]."'], ";
+        $output = $output."title: '".trim($cell_array[$i])." - ".trim($cell_array[1])."', ";
+        $output = $output."classNames: ['subject', '".trim($cell_array[$i])."'], ";
       }
       elseif($i == 2) {
         if(filter_var(trim($cell_array[$i]), FILTER_VALIDATE_URL)) {
-          $output = $output."url: '".$cell_array[$i]."', ";
+          $output = $output."url: '".trim($cell_array[$i])."', ";
         }
       }
       elseif($i == 3) {
