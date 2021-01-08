@@ -13,8 +13,12 @@ a.subject {
   background-color: #00cda8;
 }
 
+.subject.VWA {
+  background-color: #81a1a3;
+}
+
 .subject.M {
-  background-color: #1b9a8b;
+  background-color: #2ea4d6;
 }
 
 .subject.E {
@@ -22,11 +26,11 @@ a.subject {
 }
 
 .subject.D {
-  background-color: #c49f00;
+  background-color: #ebbe00;
 }
 
 .subject.BIUK {
-  background-color: #1c7e4c;
+  background-color: #1c7e29;
 }
 
 .subject.CH {
@@ -78,11 +82,11 @@ a.subject {
 }
 
 .subject.CAE {
-  background-color: #dd9200;
+  background-color: #ee8800;
 }
 
 .subject.IT {
-  background-color: #04b300;
+  background-color: #04c600;
 }
 
 .subject.L {
@@ -118,5 +122,5 @@ a.subject {
 }
 
 .subject.WPF-SPKU {
-  background-color: #cbe65f;
+  background-color: #aec749;
 }
