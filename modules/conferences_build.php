@@ -43,18 +43,19 @@ function conferences_build($input, $user) {
 
 function build_cells($line, $subjects) {
   $cell_array = str_getcsv($line,"|");
+  $cell_array = array_map("trim", $cell_array);
   $output = "";
   
-  if (in_array(trim($cell_array[0]), $subjects)) { // only show item if subject is enabled
+  if (in_array($cell_array[0], $subjects)) { // only show item if subject is enabled
       $output = "<tr>";
     
       for ($i = 0; $i < count($cell_array); $i++) { // cycles through every element of one line
       
         if ($i == 0) { // subject generation
-          $output = $output."<td> <span class=\"subject ". trim($cell_array[$i])."\">".trim($cell_array[$i])."</span> </td>"; 
+          $output = $output."<td> <span class=\"subject ". $cell_array[$i]."\">".$cell_array[$i]."</span> </td>"; 
         }
         elseif ($i == 2) { // resource generation
-          $output = $output."<td>".prettify_resource( trim($cell_array[$i]) )."</td>";  
+          $output = $output."<td>".prettify_resource($cell_array[$i])."</td>";  
         }
         elseif ($i == 3) { // weekday generation
           $output = $output."<td class=\"date\">".prettify_date($cell_array[$i])."</td>";  
@@ -63,7 +64,7 @@ function build_cells($line, $subjects) {
           // Ignore
         }
         else {
-            $output = $output."<td>".trim($cell_array[$i])."</td>"; 
+            $output = $output."<td>".$cell_array[$i]."</td>"; 
         }  
         
       }
@@ -79,17 +80,17 @@ function prettify_resource($resource) {
   
   if (filter_var($resource, FILTER_VALIDATE_URL)) { // check if resource is URL
     
-    if (begins_with(trim($resource), "https://moodle.it-gymnasium.at/mod/bigbluebuttonbn/")) {
+    if (begins_with($resource, "https://moodle.it-gymnasium.at/mod/bigbluebuttonbn/")) {
       $prettified_resource = "<a href=\"".$resource."\" target=\"_blank\" class=\"link-button bigbluebutton\"><img src=\"images/bigbluebutton.png\" height=\"16px\"> Open in BigBlueButton </a>";
     }
-    elseif (begins_with(trim($resource), "https://discordapp.com/channels/")) {
+    elseif (begins_with($resource, "https://discordapp.com/channels/")) {
       $prettified_resource = "<a href=\"".$resource."\" target=\"_blank\" class=\"link-button discord\"><img src=\"images/discord.svg\" height=\"16px\"> Open in Discord </a>";
     }
     else {
       $prettified_resource = "<a href=\"".$resource."\" target=\"_blank\">".htmlspecialchars($resource)."</a>";
     }
   }
-  elseif (trim($resource) == "") {
+  elseif ($resource == "") {
     $prettified_resource = "<span class=\"unavailable\"> No link available yet";
   }
   else {
@@ -100,7 +101,7 @@ function prettify_resource($resource) {
 }
 
 function prettify_date($date) {
-  $timestamp = date_timestamp_get( date_create_from_format("d.m.Y, H:i", trim($date)) );
+  $timestamp = date_timestamp_get( date_create_from_format("d.m.Y, H:i", $date) );
   $prettified_date = date("D, d.m.Y, H:i", $timestamp);
   
   return $prettified_date;

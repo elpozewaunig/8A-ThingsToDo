@@ -84,19 +84,20 @@ function table_build($input, $user) {
 
 function build_cells($line, $subjects, $include_progress, $progress, $subjects_meta) {
   $cell_array = str_getcsv($line,"|");
+  $cell_array = array_map("trim", $cell_array);
   $output = "";
   
-  if (in_array(trim($cell_array[0]), $subjects)) { // only show item if subject is enabled
+  if (in_array($cell_array[0], $subjects)) { // only show item if subject is enabled
     
     if ($include_progress) {
       
-      if(in_array(trim($cell_array[1]), $progress)) {
+      if(in_array($cell_array[1], $progress)) {
         $output = "<tr class=\"finished\">";
-        $output = $output."<td><input type=\"checkbox\" name=\"progress[]\" value=\"".trim($cell_array[1])."\" checked=\"true\"><span class=\"sort-meta\">Done</span></td>"; // generates checked checkboxes
+        $output = $output."<td><input type=\"checkbox\" name=\"progress[]\" value=\"".$cell_array[1]."\" checked=\"true\"><span class=\"sort-meta\">Done</span></td>"; // generates checked checkboxes
       }
       else {
         $output = "<tr>";
-        $output = $output."<td><input type=\"checkbox\" name=\"progress[]\" value=\"".trim($cell_array[1])."\"><span class=\"sort-meta\">Not done</span></td>";
+        $output = $output."<td><input type=\"checkbox\" name=\"progress[]\" value=\"".$cell_array[1]."\"><span class=\"sort-meta\">Not done</span></td>";
       }
     }
   
@@ -109,21 +110,21 @@ function build_cells($line, $subjects, $include_progress, $progress, $subjects_m
       if ($i !== 1) { // skip id
         
         if ($i == 0) { // subject generation
-          $output = $output."<td> <span class=\"subject ". trim($cell_array[$i])."\">".trim($cell_array[$i])."</span> </td>"; 
+          $output = $output."<td> <span class=\"subject ".$cell_array[$i]."\">".$cell_array[$i]."</span> </td>"; 
         }
         elseif ($i == 3) { // resource generation
-          $output = $output."<td>".prettify_resource( trim($cell_array[$i]) )."</td>";  
+          $output = $output."<td>".prettify_resource($cell_array[$i])."</td>";  
         }
         elseif ($i == 4) { // date generation
-          if (trim($cell_array[$i]) == '#') {
+          if ($cell_array[$i] == '#') {
             $output = $output."<td>".first_lesson($subjects_meta, $cell_array[0])."</td>";
           }
           else {
-            $output = $output."<td>".trim($cell_array[$i])."</td>"; 
+            $output = $output."<td>".$cell_array[$i]."</td>"; 
           }
         }     
         else {
-          $output = $output."<td>".trim($cell_array[$i])."</td>"; 
+          $output = $output."<td>".$cell_array[$i]."</td>"; 
         }
         
       }
@@ -142,7 +143,7 @@ function first_lesson($subject_array, $subject) { // resolves # as next lesson, 
       $line_array = str_getcsv($l, '|');
       $line_array = array_map('trim', $line_array);
       
-      if (trim($subject) == trim($line_array[0])) {
+      if ($subject == $line_array[0]) {
         $lessons = str_getcsv($line_array[1], ',');
         
         $next_lesson = $nextschoolday;

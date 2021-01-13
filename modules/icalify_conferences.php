@@ -30,8 +30,9 @@ function icalify_conferences($input, $user) {
 function build_event($line, $subjects) {
 
   $cell_array = str_getcsv($line,"|");
+  $cell_array = array_map("trim", $cell_array);
 
-  if(in_array( trim($cell_array[0]), $subjects ))  { // only show item if subject is enabled
+  if(in_array($cell_array[0], $subjects ))  { // only show item if subject is enabled
     
     $output = "BEGIN:VEVENT\r\n";
   
@@ -43,11 +44,11 @@ function build_event($line, $subjects) {
     }
     $output = $output."UID:".hash('sha1', $hash_input)."\r\n";
     
-    $output = $output."SUMMARY:".trim($cell_array[0])." - ".trim($cell_array[1])."\r\n";
-    $output = $output."DESCRIPTION:".trim($cell_array[1])."\r\n";
+    $output = $output."SUMMARY:".$cell_array[0]." - ".$cell_array[1]."\r\n";
+    $output = $output."DESCRIPTION:".$cell_array[1]."\r\n";
         
-    if(filter_var(trim($cell_array[2]), FILTER_VALIDATE_URL)) {
-      $output = $output."URL:".trim($cell_array[2])."\r\n";
+    if(filter_var($cell_array[2], FILTER_VALIDATE_URL)) {
+      $output = $output."URL:".$cell_array[2]."\r\n";
     }
     
     $output = $output."DTSTAMP:".icalify_date($cell_array[3])."\r\n";
@@ -56,7 +57,7 @@ function build_event($line, $subjects) {
     if(!array_key_exists(4, $cell_array)) {
       $output = $output."DTEND:".icalify_date(add_to_date($cell_array[3], "+1 hour"))."\r\n";
     }
-    elseif(trim($cell_array[4]) == '#') {
+    elseif($cell_array[4] == '#') {
       $output = $output."DTEND:".icalify_date(add_to_date($cell_array[3], "+".lesson_length))."\r\n"; // lesson length is defined in config.txt
     }
     else {
@@ -71,14 +72,14 @@ function build_event($line, $subjects) {
 }
 
 function icalify_date($datestring) {
-  $timestamp = date_timestamp_get( date_create_from_format("d.m.Y, H:i", trim($datestring)) );
+  $timestamp = date_timestamp_get( date_create_from_format("d.m.Y, H:i", $datestring) );
   $converted_date = date("Ymd", $timestamp)."T".date("His", $timestamp);
   
   return $converted_date;
 }
 
 function add_to_date($datestring, $addition) {
-  $timestamp = date_timestamp_get( date_create_from_format("d.m.Y, H:i", trim($datestring)) );
+  $timestamp = date_timestamp_get( date_create_from_format("d.m.Y, H:i", $datestring) );
   $new_timestamp = strtotime($addition, $timestamp);
   
   $date = date("d.m.Y, H:i", $new_timestamp);

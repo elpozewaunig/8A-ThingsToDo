@@ -32,25 +32,26 @@ function build_event($line, $subjects) {
   $output = "{";
   
   $cell_array = str_getcsv($line,"|");
+  $cell_array = array_map("trim", $cell_array);
   
-  if(in_array( trim($cell_array[0]), $subjects ))  { // only show item if subject is enabled
+  if(in_array($cell_array[0], $subjects ))  { // only show item if subject is enabled
       
     for ($i = 0; $i < count($cell_array); $i++) { // cycles through every element of one line
       
       if($i == 0) {
-        $output = $output."title: '".trim($cell_array[$i])." - ".trim($cell_array[1])."', ";
-        $output = $output."classNames: ['subject', '".trim($cell_array[$i])."'], ";
+        $output = $output."title: '".$cell_array[$i]." - ".$cell_array[1]."', ";
+        $output = $output."classNames: ['subject', '".$cell_array[$i]."'], ";
       }
       elseif($i == 2) {
-        if(filter_var(trim($cell_array[$i]), FILTER_VALIDATE_URL)) {
-          $output = $output."url: '".trim($cell_array[$i])."', ";
+        if(filter_var($cell_array[$i], FILTER_VALIDATE_URL)) {
+          $output = $output."url: '".$cell_array[$i]."', ";
         }
       }
       elseif($i == 3) {
         $output = $output."start: '".jsonify_date($cell_array[$i])."', ";
       }
       elseif($i == 4) {
-        if(trim($cell_array[$i]) == '#') {
+        if($cell_array[$i] == '#') {
           $output = $output."end: '".jsonify_date(add_to_date($cell_array[3], "+".lesson_length))."'"; // lesson length is defined in config.txt
         }
         else {
@@ -67,14 +68,14 @@ function build_event($line, $subjects) {
 }
 
 function jsonify_date($datestring) {
-  $timestamp = date_timestamp_get( date_create_from_format("d.m.Y, H:i", trim($datestring)) );
+  $timestamp = date_timestamp_get( date_create_from_format("d.m.Y, H:i", $datestring) );
   $converted_date = date("Y-m-d", $timestamp)."T".date("H:i:s", $timestamp);
   
   return $converted_date;
 }
 
 function add_to_date($datestring, $addition) {
-  $timestamp = date_timestamp_get( date_create_from_format("d.m.Y, H:i", trim($datestring)) );
+  $timestamp = date_timestamp_get( date_create_from_format("d.m.Y, H:i", $datestring) );
   $new_timestamp = strtotime($addition, $timestamp);
   
   $date = date("d.m.Y, H:i", $new_timestamp);
