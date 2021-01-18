@@ -26,11 +26,16 @@ check_user();
     
     h1 {
       margin: 20px;
-      margin-top: 40px;
+      margin-top: 50px;
       
       text-align: center;
       font-size: 10vmin;
       margin-bottom: 0px;
+      
+      background-color: #ff9100;
+      color: #ffffff;
+      padding: 10px;
+      border-radius: 5px;
     }
     
     h2 {
