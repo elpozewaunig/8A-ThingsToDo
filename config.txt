@@ -3,5 +3,5 @@ subtitle: Things To Do
 logo: /images/school.svg
 icon: /images/icons/icon.svg
 touch_icon: /images/icons/touch-icon.png
-school_start: 25-01-2021
+school_start: 15-02-2021
 lesson_length: 50 minutes
