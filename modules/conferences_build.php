@@ -83,7 +83,7 @@ function prettify_resource($resource) {
     if (begins_with($resource, "https://moodle.it-gymnasium.at/mod/bigbluebuttonbn/")) {
       $prettified_resource = "<a href=\"".$resource."\" target=\"_blank\" class=\"link-button bigbluebutton\"><img src=\"images/bigbluebutton.png\" height=\"16px\"> Open in BigBlueButton </a>";
     }
-    elseif (begins_with($resource, "https://discordapp.com/channels/")) {
+    elseif (begins_with($resource, "https://discord.com/channels/")) {
       $prettified_resource = "<a href=\"".$resource."\" target=\"_blank\" class=\"link-button discord\"><img src=\"images/discord.svg\" height=\"16px\"> Open in Discord </a>";
     }
     else {
