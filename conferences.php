@@ -51,6 +51,7 @@ generate_topbar();
 </div>
 
 <script>
+  var renderEvent = new Event('render');
 
   document.addEventListener('DOMContentLoaded', function() {
     if( typeof sessionStorage.getItem('conferences-tab') == 'string') {
@@ -60,6 +61,13 @@ generate_topbar();
       toggleMode('list');
     }
  	}, false);
+  
+  window.addEventListener('resize', function() {
+    if(activate == "calendar") {
+      calendar_el = document.getElementById('calendar');
+      calendar_el.dispatchEvent(renderEvent);
+    }
+  });
 
   function toggleMode(element) {
     if (element == "list") {
@@ -83,7 +91,6 @@ generate_topbar();
       toggle_activate.classList.add("current");
       toggle_disable.classList.remove("current");
       
-      var renderEvent = new Event('render');
       activate_el.dispatchEvent(renderEvent);
   }
 </script>
