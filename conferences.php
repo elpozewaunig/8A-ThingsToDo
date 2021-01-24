@@ -151,8 +151,13 @@ conferences_build($conferences, $user);
   var listenEl = document.getElementById('calendar');
 
   listenEl.addEventListener('render', function(){
+    
+    if(typeof calendar !== 'undefined') {
+      view = calendar.view;
+    }
+    
     var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
+    calendar = new FullCalendar.Calendar(calendarEl, {
       events: [
         <?php 
         include "modules/jsonify_conferences.php";
@@ -212,6 +217,10 @@ conferences_build($conferences, $user);
       nowIndicator: true
     });
     calendar.render();
+    
+    if(typeof view !== 'undefined') {
+      calendar.changeView(view.type, view.currentStart);
+    }
     
   }, false);
 </script>
