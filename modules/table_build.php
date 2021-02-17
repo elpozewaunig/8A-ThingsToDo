@@ -140,20 +140,22 @@ function first_lesson($subject_array, $subject) { // resolves # as next lesson, 
     $nextschoolday = strtotime(school_start); // defined in config.txt
     
     foreach ($subject_array as $l) {
-      $line_array = str_getcsv($l, '|');
-      $line_array = array_map('trim', $line_array);
-      
-      if ($subject == $line_array[0]) {
-        $lessons = str_getcsv($line_array[1], ',');
+      if($l !== PHP_EOL) {
+        $line_array = str_getcsv($l, '|');
+        $line_array = array_map('trim', $line_array);
         
-        $next_lesson = $nextschoolday;
-        
-        for ($i=1; $i <= 7; $i++) {
-          if (in_array(date("D", $next_lesson), array_map('trim', $lessons) )) {
-            break;
-          }
-          else {
-            $next_lesson = strtotime("+1 day", $next_lesson);
+        if ($subject == $line_array[0]) {
+          $lessons = str_getcsv($line_array[1], ',');
+          
+          $next_lesson = $nextschoolday;
+          
+          for ($i=1; $i <= 7; $i++) {
+            if (in_array(date("D", $next_lesson), array_map('trim', $lessons) )) {
+              break;
+            }
+            else {
+              $next_lesson = strtotime("+1 day", $next_lesson);
+            }
           }
         }
       }
