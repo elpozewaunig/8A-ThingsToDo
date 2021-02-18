@@ -146,11 +146,12 @@ function first_lesson($subject_array, $subject) { // resolves # as next lesson, 
         
         if ($subject == $line_array[0]) {
           $lessons = str_getcsv($line_array[1], ',');
+          $lessons = array_map('trim', $lessons);
           
           $next_lesson = $nextschoolday;
           
           for ($i=1; $i <= 7; $i++) {
-            if (in_array(date("D", $next_lesson), array_map('trim', $lessons) )) {
+            if (in_array(date("D", $next_lesson), $lessons )) {
               break;
             }
             else {
