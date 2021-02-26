@@ -26,6 +26,7 @@ div.topbar {
   background-color: #ff9100;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   z-index: 10;
+  user-select: none;
 }
 
 div.topbar topitem {
@@ -147,6 +148,7 @@ div.bottombar {
   background-color: #ff9100;
   color: #ffffff;
   border-top: 1px solid #ffffff;
+  user-select: none;
 }
 
 div.bottombar bottomitem {
@@ -192,6 +194,7 @@ div.toggle {
   background-color: #ff8200;
   color: #ffffff;
   cursor: pointer;
+  user-select: none;
 
   white-space: nowrap;
   text-align: center;

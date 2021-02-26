@@ -4,11 +4,13 @@
   color: #ffffff;
   white-space: nowrap;
   word-break: normal;
+  user-select: none;
 }
 
 div.subscribe {
   display: block;
   margin-top: 10px;
+  user-select: none;
 }
 
 div.subscribe a {
