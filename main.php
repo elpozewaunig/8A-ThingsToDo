@@ -150,6 +150,7 @@ echo <<<TABLEFILTERCONFIG
         status_bar: false,
         mark_active_columns: true,
         highlight_keywords: false,
+        no_results_message: true,
         col_types: [
             'string', 'string', 'string', 'string', { type: 'date', locale: 'de' }
         ],
