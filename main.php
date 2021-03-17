@@ -124,7 +124,7 @@ echo <<<TABLEFILTERCONFIG
             'string', 'string', 'string', { type: 'date', locale: 'de' }
         ],
         extensions: [{ name: 'sort',
-          types: ['none', 'none', 'none', { type: 'date', locale: 'de' }]
+          types: ['string', 'none', 'none', { type: 'date', locale: 'de' }]
          }]
     };
 TABLEFILTERCONFIG;
@@ -154,7 +154,7 @@ echo <<<TABLEFILTERCONFIG
             'string', 'string', 'string', 'string', { type: 'date', locale: 'de' }
         ],
         extensions: [{ name: 'sort',
-          types: ['none', 'none', 'none', 'none', { type: 'date', locale: 'de' }]
+          types: ['string', 'string', 'none', 'none', { type: 'date', locale: 'de' }]
          }]
     };
 TABLEFILTERCONFIG;

@@ -134,7 +134,7 @@ conferences_build($conferences, $user);
             'string', 'string', 'string', { type: 'date', format: ['{weekday}, {dd}.{MM}.{yyyy}, {hh}:{mm}'] }
         ],
         extensions: [{ name: 'sort',
-          types: ['none', 'none', 'none', { type: 'date', format: ['{weekday}, {dd}.{MM}.{yyyy}, {hh}:{mm}'] }]
+          types: ['string', 'none', 'none', { type: 'date', format: ['{weekday}, {dd}.{MM}.{yyyy}, {hh}:{mm}'] }]
          }]
     };
 
