@@ -115,18 +115,18 @@ span.subject {
     </li>
     <li>
       <div class="name"> Teresa </div>
-      <div class="description"> yoga guru and curator of <span class="subject L">L</span> and <span class="subject BSPM">BSPM</span> </div>
+      <div class="description"> Yoga guru and curator of <span class="subject L">L</span> and <span class="subject BSPM">BSPM</span> </div>
     </li>
     <li>
       <div class="name"> Max </div>
-      <div class="description"> who beta-tested new features in amazing detail </div>
+      <div class="description"> Beta-tester of new features </div>
     </li>
     <li>
       <div class="name"> Mathias </div>
       <div class="description"> Initial beta-tester, reporter of missing assingments </div>
     </li>
     <li>
-      <div class="name"> Alex </div><div class="name"> Lauren </div><div class="name"> Maxi </div>
+      <div class="name"> Alex </div><div class="name"> Lauren </div><div class="name"> Maxi </div><div class="name"> Renick </div>
       <div class="description"> who notified me of a few missing assignments </div>
     </li>
   </ul>
