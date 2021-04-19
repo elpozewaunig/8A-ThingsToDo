@@ -118,7 +118,7 @@ conferences_build($conferences, $user);
           types: ['local_storage'],
           filters: true
         },
-        col_0: 'select',
+        col_0: 'checklist',
         col_1: 'none',
         col_2: 'none',
         col_3: 'none',

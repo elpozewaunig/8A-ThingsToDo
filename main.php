@@ -108,7 +108,7 @@ echo <<<TABLEFILTERCONFIG
           types: ['cookie'],
           filters: true
         },
-        col_0: 'select',
+        col_0: 'checklist',
         col_1: 'none',
         col_2: 'none',
         col_3: 'none',
@@ -138,7 +138,7 @@ echo <<<TABLEFILTERCONFIG
           filters: true
         },
         col_0: 'select',
-        col_1: 'select',
+        col_1: 'checklist',
         col_2: 'none',
         col_3: 'none',
         col_4: 'none',
