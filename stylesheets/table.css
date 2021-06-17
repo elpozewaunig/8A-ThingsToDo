@@ -61,6 +61,10 @@ tr.finished.even {
   color: #ffffff;
 }
 
+tr.due {
+  background-color: #fff245;
+}
+
 div.save-bar {
   display: table;
   width: 100%;
@@ -163,6 +167,18 @@ th img {
   
   tr.finished.even {
     background-color: #72966c;
+  }
+  
+  tr.due {
+    color: #222222;
+  }
+  
+  tr.due.odd {
+    background-color: #c7bd36;
+  }
+  
+  tr.due.even {
+    background-color: #eee45e;
   }
   
 }

@@ -96,7 +96,21 @@ function build_cells($line, $subjects, $include_progress, $progress, $subjects_m
         $output = $output."<td><input type=\"checkbox\" name=\"progress[]\" value=\"".$cell_array[1]."\" checked=\"true\"><span class=\"sort-meta\">Done</span></td>"; // generates checked checkboxes
       }
       else {
-        $output = "<tr>";
+        $assignment_due = $cell_array[4];
+        
+        if($assignment_due == '#') {
+          $assignment_due = first_lesson($subjects_meta, $cell_array[0]);
+        }
+        
+        $duedate = date_timestamp_get(date_create_from_format("d.m.Y", $assignment_due));
+        $today = time();
+        $tomorrow = strtotime("+1 day");
+        if ($duedate == $tomorrow || $duedate == $today) {
+          $output = "<tr class=\"due\">";
+        }
+        else {
+          $output = "<tr>";
+        }
         $output = $output."<td><input type=\"checkbox\" name=\"progress[]\" value=\"".$cell_array[1]."\"><span class=\"sort-meta\">Not done</span></td>";
       }
     }
