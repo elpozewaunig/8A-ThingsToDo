@@ -1,6 +1,6 @@
-# 7A ThingsToDo
+# 8A ThingsToDo
 
-This is the source code for running an Apache Server to provide an overview and help coordinate workload for students of class 7A during the Coronavirus break. It features a dynamically generated table tailored to the respective users subjects, the possibility to store progress on the server and also some more goodies, such as a conference calendar. For the time being it is specifically tailored to this usecase, but it can easily be customized to more general situations.
+This is the source code for running an Apache Server to provide an overview and help coordinate workload for students of class 8A during the Coronavirus break. It features a dynamically generated table tailored to the respective users subjects, the possibility to store progress on the server and also some more goodies, such as a conference calendar. For the time being it is specifically tailored to this usecase, but it can easily be customized to more general situations.
 
 ## Installation
 Check out [``INSTALL.md``](INSTALL.md) to find out how to install this project.

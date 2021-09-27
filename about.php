@@ -60,8 +60,8 @@ div.contact-line img {
 <h1> <img src="images/fa/info.svg" height="26px"> About </h1> 
   
 <div class="content-block">
-  <p>This website was developed by Elias Pozewaunig to help students of class 7A manage their assignments. Several amazing people helped me accomplish this project - <a href="thanks.php">check them out</a>! <br>
-  Just in case you are interested in the code - it is available under the <a href="https://github.com/elpozewaunig/7A-ThingsToDo/blob/master/LICENSE" target="_blank">MIT license</a> on <a href="https://github.com/elpozewaunig/7A-ThingsToDo" target="_blank">GitHub</a>.</p>
+  <p>This website was developed by Elias Pozewaunig to help students of class 8A manage their assignments. Several amazing people helped me accomplish this project - <a href="thanks.php">check them out</a>! <br>
+  Just in case you are interested in the code - it is available under the <a href="https://github.com/elpozewaunig/8A-ThingsToDo/blob/master/LICENSE" target="_blank">MIT license</a> on <a href="https://github.com/elpozewaunig/8A-ThingsToDo" target="_blank">GitHub</a>.</p>
   
   <h2>Contact</h2>
     <div class="contact"> Elias Pozewaunig </div>

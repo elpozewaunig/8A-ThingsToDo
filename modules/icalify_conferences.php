@@ -13,7 +13,7 @@ function icalify_conferences($input, $user) {
     $subjects = SUBJECTS; // subjects as defined in constants.php
   }
   
-  $json = "BEGIN:VCALENDAR\r\n"."VERSION:2.0\r\n"."PRODID:-//elpozewaunig//7A-ThingsToDo\r\n"."METHOD:PUBLISH\r\n";
+  $json = "BEGIN:VCALENDAR\r\n"."VERSION:2.0\r\n"."PRODID:-//elpozewaunig//8A-ThingsToDo\r\n"."METHOD:PUBLISH\r\n";
   
   foreach($input as $l) {
     if($l !== PHP_EOL) {
