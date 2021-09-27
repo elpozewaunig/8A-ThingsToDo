@@ -99,7 +99,13 @@ generate_topbar();
 <?php 
 include 'modules/conferences_build.php';
 
-$conferences = file('data/conferences/conferences.txt');
+$path = 'data/conferences/conferences.txt';
+if(file_exists($path)) {  
+  $conferences = file($path);
+}
+else {
+  $conferences = [];
+}
 
 if (isset($_COOKIE['user']) == false || valid_user($_COOKIE['user']) == false) {
   $user = "all";

@@ -51,8 +51,14 @@ echo "<link rel=\"stylesheet\" media=\"print\" href=\"".versionify('stylesheets/
 
 <?php 
 include 'modules/table_build.php';
-  
-$work = file('data/work/work.txt');
+
+$path = 'data/work/work.txt';
+if(file_exists($path)) {  
+  $work = file('data/work/work.txt');
+}
+else {
+  $work = [];
+}
       
 if (isset($_COOKIE['user']) == false || valid_user($_COOKIE['user']) == false) {
   $user = "all";
