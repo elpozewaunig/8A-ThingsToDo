@@ -3,15 +3,20 @@
 function get_users() { // creates array with usernames
   $user_names = array();
   $user_dir = "data/users";
-
-  $user_names = scandir($user_dir);
   
-  foreach ($user_names as $element) {
-    if (!is_dir($user_dir."/".$element)) {
-      $cleaned_user_names[] = $element;
+  if(file_exists($user_dir)) {
+    $user_names = scandir($user_dir);
+    
+    foreach ($user_names as $element) {
+      if (!is_dir($user_dir."/".$element)) {
+        $cleaned_user_names[] = $element;
+      }
     }
+    return $cleaned_user_names;
   }
-  return $cleaned_user_names;
+  else {
+    return array();
+  }
 }
 
 function build_userdropdown() {

@@ -168,8 +168,9 @@ conferences_build($conferences, $user);
         <?php 
         include "modules/jsonify_conferences.php";
         
-        if (file_exists('data/conferences/archive.txt')) {
-          $archive = file('data/conferences/archive.txt');
+        $archive_path = 'data/conferences/archive.txt';
+        if (file_exists($archive_path)) {
+          $archive = file($archive_path);
           echo jsonify_conferences($archive, $user).",";
         }
         echo jsonify_conferences($conferences, $user);

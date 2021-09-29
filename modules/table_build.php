@@ -41,7 +41,13 @@ function table_build($input, $user) {
   echo "</tr></thead>";
   echo "<tbody>";
   
-  $subjects_meta = file('data/subjects/subjects.txt');
+  $subjects_meta_path = 'data/subjects/subjects.txt';
+  if(file_exists($subjects_meta_path)) {
+    $subjects_meta = file($subjects_meta_path);
+  }
+  else {
+    $subjects_meta = [];
+  }
   
   $table = "";
   
@@ -153,27 +159,32 @@ function build_cells($line, $subjects, $include_progress, $progress, $subjects_m
 function first_lesson($subject_array, $subject) { // resolves # as next lesson, after school start
     $nextschoolday = strtotime(school_start); // defined in config.txt
     
-    foreach ($subject_array as $l) {
-      if($l !== PHP_EOL) {
-        $line_array = str_getcsv($l, '|');
-        $line_array = array_map('trim', $line_array);
-        
-        if ($subject == $line_array[0]) {
-          $lessons = str_getcsv($line_array[1], ',');
-          $lessons = array_map('trim', $lessons);
+    if($subject_array !== []) {
+      foreach ($subject_array as $l) {
+        if($l !== PHP_EOL) {
+          $line_array = str_getcsv($l, '|');
+          $line_array = array_map('trim', $line_array);
           
-          $next_lesson = $nextschoolday;
-          
-          for ($i=1; $i <= 7; $i++) {
-            if (in_array(date("D", $next_lesson), $lessons )) {
-              break;
-            }
-            else {
-              $next_lesson = strtotime("+1 day", $next_lesson);
+          if ($subject == $line_array[0]) {
+            $lessons = str_getcsv($line_array[1], ',');
+            $lessons = array_map('trim', $lessons);
+            
+            $next_lesson = $nextschoolday;
+            
+            for ($i=1; $i <= 7; $i++) {
+              if (in_array(date("D", $next_lesson), $lessons )) {
+                break;
+              }
+              else {
+                $next_lesson = strtotime("+1 day", $next_lesson);
+              }
             }
           }
         }
       }
+    }
+    else {
+      $next_lesson = $nextschoolday;
     }
     
   $date = date('d.m.Y', $next_lesson); 

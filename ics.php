@@ -2,9 +2,18 @@
 include 'modules/common/master_include.php';
 include 'modules/icalify_conferences.php';
 
-$conferences = file('data/conferences/conferences.txt');
-if(file_exists('data/conferences/archive.txt')) {
-  $archive = file('data/conferences/archive.txt');
+$conference_path = 'data/conferences/conferences.txt';
+$archive_path = 'data/conferences/archive.txt';
+
+if(file_exists($conference_path)) {
+  $conferences = file($conference_path);
+}
+else {
+  $conferences = [];
+}
+
+if(file_exists($archive_path)) {
+  $archive = file($archive_path);
   $data = array_merge($conferences, $archive);
 }
 else {

@@ -1,7 +1,13 @@
 <?php
 
 function get_work_ids() { // returns an array with all IDs of assignments
-  $work = file('data/work/work.txt');
+  $path = 'data/work/work.txt';
+  if(file_exists($path)) {
+    $work = file($path);
+  }
+  else {
+    $work = array();
+  }
   
   $id_array = [];
   
