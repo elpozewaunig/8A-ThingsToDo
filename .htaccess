@@ -1,6 +1,8 @@
 ErrorDocument 404 /404.php
 ErrorDocument 403 /403.php
 
+Header add Access-Control-Allow-Origin "*"
+
 <Files "password.txt">  
 Order Allow,Deny
 Deny from All
