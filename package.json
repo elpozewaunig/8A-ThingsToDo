@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/elpozewaunig/8A-ThingsToDo#readme",
   "devDependencies": {
-    "fullcalendar": "^5.9.0",
+    "fullcalendar": "^5.10.1",
     "tablefilter": "^0.7.2"
   }
 }
