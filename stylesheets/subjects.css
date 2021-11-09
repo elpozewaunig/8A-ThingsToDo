@@ -13,10 +13,6 @@ a.subject {
   background-color: #96d1c6;
 }
 
-.subject.VWA {
-  background-color: #81a1a3;
-}
-
 .subject.M {
   background-color: #2ea4d6;
 }
@@ -35,10 +31,6 @@ a.subject {
 
 .subject.CH {
   background-color: #1cc6ad;
-}
-
-.subject.CHL {
-  background-color: #159c88;
 }
 
 .subject.PH {
@@ -73,16 +65,12 @@ a.subject {
   background-color: #e490e8;
 }
 
-.subject.INFD {
-  background-color: #7e1c5d;
-}
-
-.subject.INFH {
+.subject.INF-KAM {
   background-color: #775b2b;
 }
 
-.subject.CAE {
-  background-color: #ee8800;
+.subject.INF-WER {
+  background-color: #775b2b;
 }
 
 .subject.IT {
@@ -103,24 +91,4 @@ a.subject {
 
 .subject.WPF-SPA {
   background-color: #5b0000;
-}
-
-.subject.WPF-PUP {
-  background-color: #d29cca;
-}
-
-.subject.WPF-ME {
-  background-color: #ff79fe;
-}
-
-.subject.WPF-GSPB {
-  background-color: #bf6f2e;
-}
-
-.subject.WPF-BIUK {
-  background-color: #125c36;
-}
-
-.subject.WPF-SPKU {
-  background-color: #aec749;
 }
