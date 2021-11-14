@@ -34,6 +34,7 @@ if (isset($_SESSION['login_successful'])) {
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title> <?= title ?> - <?= subtitle ?> </title>
 
@@ -43,7 +44,6 @@ if (isset($_SESSION['login_successful'])) {
 <?php
 include 'modules/common/versionify.php';
 
-echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/common.css')."\">";
 echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/login.css')."\">";
 ?>
 
@@ -53,11 +53,10 @@ echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/login.css')."\">
 
   <div class="login">
     <div class="headerbar">
-      <img src="images/triangle.svg" style="height: 15vw; position: absolute; left: 0; top: 0;">
-    <h1><img src="<?= logo ?>" class="logo"> <?= title ?> </h1>
-    <h2> <?= subtitle ?> </h2>
-  </div>
-  <h3>Login here first</h3>
+      <div class="logo_container"><img src="<?= logo ?>" class="logo"></div>
+      <h1> <?= title ?> </h1>
+      <h2> <?= subtitle ?> </h2>
+    </div>
   
 <form action="login.php" method="post">
   
@@ -65,12 +64,12 @@ echo "<link rel=\"stylesheet\" href=\"".versionify('stylesheets/login.css')."\">
   
   if(isset($_SESSION['login_successful'])) {
     if ($_SESSION['login_successful'] == false) {
-      echo "<input class=\"wrong-input\" type=\"password\" name=\"password\"><br>";
+      echo "<input class=\"wrong-input\" type=\"password\" name=\"password\" placeholder=\"Enter password here\"><br>";
       echo "<div class=\"alert\"> Password is incorrect. Try again </div><br>";
     }
   }
   else {
-    echo "<input type=\"password\" name=\"password\"><br>";
+    echo "<input type=\"password\" name=\"password\" placeholder=\"Enter password here\"><br>";
   }
       
   ?>
