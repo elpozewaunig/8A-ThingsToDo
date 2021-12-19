@@ -126,6 +126,7 @@ input.progress-submit {
 input.progress-submit:hover {
   background-color: #e94d00;
   background-image: linear-gradient(#e94d00, #e94d00);
+  transform: scale(1.1);
 }
 
 td a {
