@@ -14,6 +14,17 @@
 
 .fc-event {
   overflow: hidden;
+  margin-bottom: 0px !important;
+}
+
+.fc-timegrid-event-harness {
+  border-radius: 3px;
+  transition: 0.1s all ease-in-out;
+}
+
+.fc-timegrid-event-harness:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 15px 30px 5px rgba(0,0,0,0.3);
 }
 
 .fc-timegrid-event-harness-inset .fc-timegrid-event {
