@@ -98,7 +98,7 @@ function build_cells($line, $subjects, $include_progress, $progress, $subjects_m
     if ($include_progress) {
       
       if(in_array($cell_array[1], $progress)) {
-        $output = "<tr class=\"finished\">";
+        $output = "<tr class=\"finished\" id=\"".$cell_array[1]."\">";
         $output = $output."<td><input type=\"checkbox\" name=\"progress[]\" value=\"".$cell_array[1]."\" checked=\"true\"><span class=\"sort-meta\">Done</span></td>"; // generates checked checkboxes
       }
       else {
@@ -112,17 +112,17 @@ function build_cells($line, $subjects, $include_progress, $progress, $subjects_m
         $today = time();
         $tomorrow = strtotime("+1 day");
         if ($duedate == $tomorrow || $duedate == $today) {
-          $output = "<tr class=\"due\">";
+          $output = "<tr class=\"due\" id=\"".$cell_array[1]."\">";
         }
         else {
-          $output = "<tr>";
+          $output = "<tr id=\"".$cell_array[1]."\">";
         }
         $output = $output."<td><input type=\"checkbox\" name=\"progress[]\" value=\"".$cell_array[1]."\"><span class=\"sort-meta\">Not done</span></td>";
       }
     }
   
     else {
-      $output = "<tr>";
+      $output = "<tr id=\"".$cell_array[1]."\">";
     }
     
     for ($i = 0; $i < count($cell_array); $i++) { // cycles through every element of one line

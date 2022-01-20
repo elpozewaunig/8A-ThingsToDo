@@ -65,6 +65,14 @@ tr.due {
   background-color: #fff245;
 }
 
+tr.animate {
+  transition: 0.1s all ease-in-out;
+}
+
+tr.highlight {
+  background-color: #87edff;
+}
+
 div.save-bar {
   display: table;
   width: 100%;
@@ -180,6 +188,10 @@ th img {
   
   tr.due.even {
     background-color: #eee45e;
+  }
+  
+  tr.highlight {
+    background-color: #87edff;
   }
   
 }

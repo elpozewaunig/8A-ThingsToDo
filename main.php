@@ -173,6 +173,36 @@ TABLEFILTERCONFIG;
 
 </script> 
  
+<script>
+  highlight_hash();
+  
+  window.addEventListener("hashchange", highlight_hash, false);
+  
+  function highlight_hash()  {
+    if (typeof timer !== 'undefined') {
+      clearTimeout(timer);
+      clear_queue = document.getElementsByClassName("highlight");
+      if(clear_queue.length > 0) {
+        for(var i = 0; i < clear_queue.length; i++) {
+          clear_queue[i].classList.remove("highlight");
+        }
+      }
+    }
+    if (window.location.hash) {
+      var hash = window.location.hash;
+      var lookup = document.getElementById(hash.substring(1));
+      if (lookup) {
+        lookup.scrollIntoView();
+        window.scrollBy(0, -100);
+        lookup.classList.add("animate");
+        lookup.classList.add("highlight");
+        timer = setTimeout(function() {
+          lookup.classList.remove("highlight");
+        }, 3000);
+      }
+    }
+  }
+</script>
 </div>
 
 <?php 
