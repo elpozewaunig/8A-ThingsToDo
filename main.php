@@ -174,7 +174,11 @@ TABLEFILTERCONFIG;
 </script> 
  
 <script>
-  highlight_hash();
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() { // make sure page is rendered
+      highlight_hash();
+    }, 200);
+  }, false);
   
   window.addEventListener("hashchange", highlight_hash, false);
   
