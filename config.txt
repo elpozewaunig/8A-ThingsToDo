@@ -5,3 +5,4 @@ icon: /images/icons/icon.svg
 touch_icon: /images/icons/touch-icon.png
 school_start: 15-11-2021
 lesson_length: 50 minutes
+page_declaration: S.

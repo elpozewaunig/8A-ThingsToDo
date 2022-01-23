@@ -27,8 +27,18 @@ In it you can note down work using the following structure:
 
 Example: ``M | 1 | First assignment | https://www.example.org | 01.01.1994``
 
+#### ID
 The ID must be a unique number or string and once it is set, it may not be changed, as it is used for storing progress.
-You can write a ``#`` symbol instead of a date. If you have created a ``subjects.txt`` file as described below, the next lesson after school start will be calculated as the deadline.
+
+#### Resource
+The resource can be plain text, a URL or an assignment (consisting of page numbers and exercises). You can specify a page declaration in [``config.txt``](config.txt) under ``page_declaration``. This string will be used to identify a page. You can then write down an assignment in the format ``[Your page declaration string] [page number] / [exercises]``. By using a semicolon, you can declare another page with assignments.
+
+Example: Let's assume that we defined ``P.`` as a page declaration. An example assignment could look like this: ``P. 74 / 1, 2, 3; P. 86 / 4, 5``.
+
+#### Deadline
+Deadlines are written in European date format (DD.MM.YYYY).
+
+You can write a ``#`` symbol for the deadline instead of a date. If you have created a ``subjects.txt`` file as described below, the next lesson after school start will be calculated as the deadline.
 
 ### Users
 Within the ``data`` folder, create a folder called ``users``. Create files named like the user (without a file extension). Enter the subjects for this user, separated by a comma. You can optionally also enter groups in square brackets.

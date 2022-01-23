@@ -133,7 +133,7 @@ function build_cells($line, $subjects, $include_progress, $progress, $subjects_m
           $output = $output."<td> <span class=\"subject ".$cell_array[$i]."\">".$cell_array[$i]."</span> </td>"; 
         }
         elseif ($i == 3) { // resource generation
-          $output = $output."<td>".prettify_resource($cell_array[$i])."</td>";  
+          $output = $output."<td>".prettify_resource($cell_array[$i], $cell_array[0])."</td>";  
         }
         elseif ($i == 4) { // date generation
           if ($cell_array[$i] == '#') {
@@ -191,9 +191,42 @@ function first_lesson($subject_array, $subject) { // resolves # as next lesson, 
   return $date;
 }
 
-function prettify_resource($resource) {
+function prettify_resource($resource, $subject) {
   if (filter_var($resource, FILTER_VALIDATE_URL)) { // check if resource is URL
     $prettified_resource = "<a href=\"".$resource."\" target=\"_blank\">".htmlspecialchars($resource)."</a>";
+  }
+  elseif (substr($resource, 0, strlen(page_declaration)) == page_declaration) { // check if first characters mach page identifier
+    $assignment_parts = explode(";", $resource);
+    $assignment_parts = array_map('trim', $assignment_parts);
+    $prettified_resource = "";
+    foreach($assignment_parts as $part) {
+      if(strpos($part, "/") !== false) {
+        $page = substr($part, 0, strpos($part, "/")-1);
+        $exercises = substr($part, strpos($part, "/")+1);
+      }
+      else {
+        $page = $part;
+        $exercises = "";
+      }
+      $page_nr = trim(substr($page, strlen(page_declaration)));
+      $exercises = trim($exercises);
+      
+      $html_chunk = "<div class=\"assignment_chunk";
+      
+      if($exercises == "") {
+        $html_chunk = $html_chunk." no_exercise";
+      }
+      
+      $html_chunk = $html_chunk."\"><div class=\"pages subject ".$subject."\">".page_declaration." ".$page_nr."</div>";
+      
+      if($exercises !== "") {
+        $html_chunk = $html_chunk."<div class=\"bg subject ".$subject."\"><div class=\"exercises\">".$exercises."</div></div>";
+      }
+      
+      $html_chunk = $html_chunk."</div>";
+      
+      $prettified_resource = $prettified_resource.$html_chunk;
+    }
   }
   else {
     $prettified_resource = $resource;

@@ -1,7 +1,10 @@
+.subject {
+  color: #ffffff;
+}
+
 span.subject {
   padding: 5px;
   border-radius: 3px;
-  color: #ffffff;
   white-space: nowrap;
 }
 
