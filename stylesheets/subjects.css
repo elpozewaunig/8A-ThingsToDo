@@ -16,6 +16,10 @@ a.subject {
   background-color: #96d1c6;
 }
 
+.subject.VWA {
+  background-color: #81a1a3;
+}
+
 .subject.M {
   background-color: #2ea4d6;
 }
