@@ -99,7 +99,7 @@ function build_cells($line, $subjects, $include_progress, $progress, $subjects_m
       
       if(in_array($cell_array[1], $progress)) {
         $output = "<tr class=\"finished\" id=\"".$cell_array[1]."\">";
-        $output = $output."<td><input type=\"checkbox\" name=\"progress[]\" value=\"".$cell_array[1]."\" checked=\"true\"><span class=\"sort-meta\">Done</span></td>"; // generates checked checkboxes
+        $output = $output."<td><input type=\"checkbox\" class=\"checkbox\" id=\"cbx_".$cell_array[1]."\" name=\"progress[]\" value=\"".$cell_array[1]."\" checked=\"true\"><label class=\"cbx-label\" for=\"cbx_".$cell_array[1]."\"><span class=\"svg_span\"><svg viewbox=\"0 0 12 9\"><polyline points=\"1 5 4 8 11 1\"></polyline></svg></span><span class=\"sort-meta\">Done</span></label></td>"; // generates checked checkboxes
       }
       else {
         $assignment_due = $cell_array[4];
@@ -117,7 +117,7 @@ function build_cells($line, $subjects, $include_progress, $progress, $subjects_m
         else {
           $output = "<tr id=\"".$cell_array[1]."\">";
         }
-        $output = $output."<td><input type=\"checkbox\" name=\"progress[]\" value=\"".$cell_array[1]."\"><span class=\"sort-meta\">Not done</span></td>";
+        $output = $output."<td><input type=\"checkbox\" class=\"checkbox\" id=\"cbx_".$cell_array[1]."\" name=\"progress[]\" value=\"".$cell_array[1]."\"><label class=\"cbx-label\" for=\"cbx_".$cell_array[1]."\"><span class=\"svg_span\"><svg viewbox=\"0 0 12 9\"><polyline points=\"1 5 4 8 11 1\"></polyline></svg></span><span class=\"sort-meta\">Not done</span></label></td>";
       }
     }
   
