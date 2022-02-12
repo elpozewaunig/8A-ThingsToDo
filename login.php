@@ -1,5 +1,7 @@
 <?php 
 
+include "modules/common/get_config.php";
+
 session_start();
 
 if(isset($_POST['password'])) {
@@ -18,7 +20,7 @@ if(isset($_POST['password'])) {
       header("Location: ".$_SESSION['origin']);
     }
     else {
-      header("Location: main.php");
+      header("Location: ".main_page);
     }
     
     $_SESSION['login_successful'] = true;

@@ -1,5 +1,6 @@
 title: 8A
 subtitle: Things To Do
+main_page: main.php
 logo: /images/school.svg
 icon: /images/icons/icon.svg
 touch_icon: /images/icons/touch-icon.png
