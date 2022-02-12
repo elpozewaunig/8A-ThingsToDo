@@ -5,7 +5,12 @@ session_start();
 if(isset($_POST['password'])) {
   
   $password=$_POST['password'];
-  $key=file_get_contents('password.txt');
+  if(file_exists('password.txt')) {
+    $key=file_get_contents('password.txt');
+  }
+  else {
+    $key="";
+  }
 
   if ($password == $key) {
     
