@@ -55,7 +55,13 @@ function build_event($line, $subjects) {
           $output = $output."end: '".jsonify_date(add_to_date($cell_array[3], "+".lesson_length))."'"; // lesson length is defined in config.txt
         }
         else {
-          $output = $output."end: '".jsonify_date($cell_array[$i])."'";
+          if(str_contains($cell_array[$i], ",")) {
+            $output = $output."end: '".jsonify_date($cell_array[$i])."'";
+          }
+          elseif(str_contains($cell_array[$i], ":")) { // occurs when only a time but not a date is defined
+            $date = substr($cell_array[3], 0, strpos($cell_array[3], ","));
+            $output = $output."end: '".jsonify_date($date.", ".$cell_array[$i])."'";
+          }
         }
       }
       

@@ -54,14 +54,20 @@ function build_event($line, $subjects) {
     $output = $output."DTSTAMP:".icalify_date($cell_array[3])."\r\n";
     $output = $output."DTSTART:".icalify_date($cell_array[3])."\r\n";
         
-    if(!array_key_exists(4, $cell_array)) {
+    if(!array_key_exists(4, $cell_array) OR $cell_array[4] == "") {
       $output = $output."DTEND:".icalify_date(add_to_date($cell_array[3], "+1 hour"))."\r\n";
     }
     elseif($cell_array[4] == '#') {
       $output = $output."DTEND:".icalify_date(add_to_date($cell_array[3], "+".lesson_length))."\r\n"; // lesson length is defined in config.txt
     }
     else {
-      $output = $output."DTEND:".icalify_date($cell_array[4])."\r\n";
+      if(str_contains($cell_array[4], ",")) {
+        $output = $output."DTEND:".icalify_date($cell_array[4])."\r\n";
+      }
+      elseif(str_contains($cell_array[4], ":")) { // occurs when only a time but not a date is defined
+        $date = substr($cell_array[3], 0, strpos($cell_array[3], ","));
+        $output = $output."DTEND:".icalify_date($date.", ".$cell_array[4])."\r\n";
+      }
     }
       
 

@@ -66,7 +66,7 @@ In it you can note down upcoming conferences using the following structure:
 
 Subject | Description | Link | Start time (DD.MM.YYYY, hh:mm) | Optional: End time (DD.MM.YYYY, hh:mm)
 
-You can omit the end time and the calendar will display it as a one hour block. You can write a ``#`` symbol instead of a date and the end time will be calculated using the default lesson length. To change the default length, simply change the value of ``lesson_length`` in [``config.txt``](config.txt). It is written in form of a text string; PHP will automatically convert it into a valid timestamp.
+If the end time is on the same day as the start time, you can instead just write the time (hh:mm), omitting the date. You can also omit the end time completely and the calendar will display it as a one hour block. You can write a ``#`` symbol instead of a date and the end time will be calculated using the default lesson length. To change the default length, simply change the value of ``lesson_length`` in [``config.txt``](config.txt). It is written in form of a text string; PHP will automatically convert it into a valid timestamp.
 
 Optionally you can create a file called ``archive.txt``. Past conferences are not automatically hidden by the code, so that rejoining extended video conferences is less of a hassle. Since they need to be removed manually, it can be desired that they still stay visible on the calendar. You can achieve this by pasting past conferences into said ``archive.txt`` file.
 
