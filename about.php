@@ -37,7 +37,7 @@ div.contact-line {
 div.contact-line img {
   padding: 5px;
   border-radius: 50%;
-  background-color: #ff5400;
+  background-color: var(--label);
   vertical-align: middle;
 }
   

@@ -1,14 +1,14 @@
 .fc-button {
-  background-color: #ff9100 !important;
+  background-color: var(--primary) !important;
   border: 0px !important;
 }
 
 .fc-button:hover {
-  background-color: #ff6a00 !important;
+  background-color: var(--hover) !important;
 }
 
 .fc-button.fc-button-active {
-  background-color: #ff5400 !important;
+  background-color: var(--label) !important;
 }
 
 .fc-event {

@@ -1,6 +1,17 @@
+:root {
+  --primary: #ff9100;
+  --secondary: #ff8200;
+  --active: #ff7a00;
+  --hover: #ff6a00;
+  --label: #ff5400;
+  --label-hover: #e94d00;
+  --background: #ffbb54;
+  --dark: #2f2f2f;
+}
+
 body {
   position: relative;
-  background-color: #ffbb54;
+  background-color: var(--background);
   font-family: Arial;
   min-height: 100vh;
   
@@ -23,7 +34,7 @@ div.topbar {
   overflow: auto;
   width: 100%;
   position: fixed;
-  background-color: #ff9100;
+  background-color: var(--primary);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   z-index: 10;
   user-select: none;
@@ -40,7 +51,7 @@ div.topbar topitem {
 }
 
 div.topbar topitem.header {
-  background-color: #ff8200;
+  background-color: var(--secondary);
   color: #ffffff;
   font-size: 32px;
   font-weight: bold;
@@ -51,7 +62,7 @@ div.topbar topitem.header {
 }
 
 div.topbar topitem.label {
-  background-color: #ff8200;
+  background-color: var(--secondary);
   color: #ffffff;
   font-size: 16px;
   padding-right: 20px;
@@ -59,7 +70,7 @@ div.topbar topitem.label {
 }
 
 div.topbar topitem.label span {
-  background-color: #ff5400;
+  background-color: var(--label);
   padding: 10px;
   border-radius: 5px;
 }
@@ -84,11 +95,11 @@ topitem.page a {
 }
 
 topitem.page.current a {
-  background-color: #ff7a00;
+  background-color: var(--active);
 }
 
 topitem.page a:hover {
-  background-color: #ff6a00;
+  background-color: var(--hover);
 }
 
 topitem.page img {
@@ -100,7 +111,7 @@ div.topbar topitem.user-dropdown div {
     display: inline-block;
     padding-left: 10px;
     border-radius: 5px;
-    background-color: #ff5400;
+    background-color: var(--label);
 }
 
 topitem.user-dropdown select {
@@ -109,10 +120,10 @@ topitem.user-dropdown select {
   height: 40px;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #ff5400;
+  background-color: var(--label);
   color: #ffffff;
   font-size: 16px;
-  background-image: linear-gradient(#ff5400, #ff5400);
+  background-image: linear-gradient(var(--label), var(--label));
   
   cursor: pointer;
 }
@@ -123,8 +134,8 @@ topitem.user-dropdown input {
     height: 40px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #ff5400;
-    background-image: linear-gradient(#ff5400, #ff5400);
+    background-color: var(--label);
+    background-image: linear-gradient(var(--label), var(--label));
     color: #ffffff;
     font-size: 16px;
     
@@ -133,8 +144,8 @@ topitem.user-dropdown input {
 }
 
 topitem.user-dropdown input:hover {
-  background-color: #e94d00;
-  background-image: linear-gradient(#e94d00, #e94d00);
+  background-color: var(--label-hover);
+  background-image: linear-gradient(var(--label-hover), var(--label-hover));
 }
 
 div.bottombar {
@@ -145,7 +156,7 @@ div.bottombar {
   bottom: 0;
   width: 100%;
   
-  background-color: #ff9100;
+  background-color: var(--primary);
   color: #ffffff;
   border-top: 1px solid #ffffff;
   user-select: none;
@@ -162,7 +173,7 @@ div.bottombar bottomitem {
 }
 
 div.bottombar bottomitem:hover {
-  background-color: #ff6a00;
+  background-color: var(--hover);
 }
 
 div.bottombar bottomitem a {
@@ -191,7 +202,7 @@ div.toggle {
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #ff8200;
+  background-color: var(--primary);
   color: #ffffff;
   cursor: pointer;
   user-select: none;
@@ -211,11 +222,11 @@ div.toggle:last-child {
 }
 
 div.toggle:hover {
-  background-color: #ff7a00;
+  background-color: var(--active);
 }
 
 div.toggle.current {
-  background-color: #ff6a00;
+  background-color: var(--hover);
 }
 
 div.toggle img {
@@ -236,7 +247,7 @@ div.toggle img {
 @media (prefers-color-scheme: dark) {
   
   body {
-    background-color: #2f2f2f;
+    background-color: var(--dark);
   }
   
   #calendar {

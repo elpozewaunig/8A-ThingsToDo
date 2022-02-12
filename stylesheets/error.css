@@ -10,7 +10,7 @@ h1 {
   font-size: 10vmin;
   margin-bottom: 0px;
   
-  background-color: #ff9100;
+  background-color: var(--primary);
   color: #ffffff;
   padding: 10px;
   border-radius: 5px;

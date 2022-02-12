@@ -17,7 +17,7 @@ div.subscribe a {
   display: inline-block;
   margin: 5px;
   color: #ffffff;
-  background-color: #ff9100;
+  background-color: var(--primary);
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
@@ -27,7 +27,7 @@ div.subscribe a {
 }
 
 div.subscribe a:hover {
-  background-color: #ff6a00;
+  background-color: var(--hover);
 }
 
 div.subscribe a img {
