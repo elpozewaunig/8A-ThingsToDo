@@ -40,7 +40,13 @@ div.fc-toolbar-chunk {
 }
 
 @media (prefers-color-scheme: dark) {
+  
   .fc-scrollgrid-sync-inner {
     color: var(--dark-secondary);
   }
+  
+  .fc-theme-standard td, .fc-theme-standard th {
+    border-color: #6a6a6a !important;
+  }
+  
 }
