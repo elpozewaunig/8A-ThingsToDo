@@ -26,22 +26,11 @@ TOPBAR;
 </span></topitem>
 TOPBAR;  
 
-if ($_SESSION['origin'] == "/main.php") {
-  $current_class = " current";
-}
-else {
-  $current_class = "";
-}
-echo '<topitem class="page'.$current_class.'"><a href="/main.php"> <img src="/images/fa/edit.svg"> <span> Work </span> </a></topitem>';
 
-if ($_SESSION['origin'] == "/conferences.php") {
-  $current_class = " current";
-}
-else {
-  $current_class = "";
-}
-echo '<topitem class="page'.$current_class.'"><a href="/conferences.php"> <img src="/images/fa/video.svg"> <span> Conferences </span> </a></topitem>';
-  
+echo new_topbar_link("Work", "/images/fa/edit.svg", "/main.php");
+echo new_topbar_link("Conferences", "/images/fa/video.svg", "/conferences.php");
+
+
 echo <<<TOPBAR
   
   <topitem class="user-dropdown">
@@ -72,6 +61,16 @@ echo <<<TOPBAR
 
 TOPBAR;
 
+}
+
+function new_topbar_link($title, $img, $href) {
+  if ($_SESSION['origin'] == $href) {
+    $current_class = " current";
+  }
+  else {
+    $current_class = "";
+  }
+  echo '<topitem class="page'.$current_class.'"><a href="'.$href.'"> <img src="'.$img.'"> <span> '.$title.' </span> </a></topitem>';
 }
 
 ?>
