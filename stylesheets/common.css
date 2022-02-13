@@ -7,6 +7,7 @@
   --label-hover: #e94d00;
   --background: #ffbb54;
   --dark: #2f2f2f;
+  --dark-secondary: #222222;
 }
 
 body {
@@ -252,7 +253,7 @@ div.toggle img {
   
   #calendar {
     color: #ffffff;
-    background-color: #222222;
+    background-color: var(--dark-secondary);
   }
   
 }

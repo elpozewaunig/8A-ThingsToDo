@@ -38,3 +38,9 @@ h2.fc-toolbar-title {
 div.fc-toolbar-chunk {
   text-align: center;
 }
+
+@media (prefers-color-scheme: dark) {
+  .fc-scrollgrid-sync-inner {
+    color: var(--dark-secondary);
+  }
+}
