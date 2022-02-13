@@ -9,6 +9,7 @@ function check_login() {
   if (valid_login()) {
   }
   else {
+    $_SESSION['login_successful'] = false;
     header("Location: /index.php");
     exit();
   }
@@ -39,7 +40,7 @@ function valid_user($username) {
 
 function valid_login() {
   
-  if(isset($_SESSION['login_successful']) && $_SESSION['login_successful'] == true) {
+  if(isset($_SESSION['login_successful']) && $_SESSION['login_successful'] == true && isset($_SESSION['password_mtime']) && $_SESSION['password_mtime'] == filemtime("password.txt")) {
     return true;
   }
   else {

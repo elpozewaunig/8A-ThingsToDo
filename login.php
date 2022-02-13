@@ -24,6 +24,7 @@ if(isset($_POST['password'])) {
     }
     
     $_SESSION['login_successful'] = true;
+    $_SESSION['password_mtime'] = filemtime('password.txt');
   }
   else {
     header("Location: index.php");
